@@ -1,0 +1,17 @@
+material Stones_Benedeti
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.447059 0.447059 0.447059
+            diffuse 0.447059 0.447059 0.447059
+            specular 0.9 0.9 0.9 0.0
+            emissive 0.0 0.0 0.0
+            texture_unit
+            {
+                texture Benedeti.jpg 
+            }
+        }
+    }
+}

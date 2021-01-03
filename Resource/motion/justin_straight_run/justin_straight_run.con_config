@@ -1,0 +1,12 @@
+return {
+		skeleton="../Resource/motion/justin_straight_run/justin_straight_run.wrl",
+		motion="../Resource/motion/justin_straight_run/justin_straight_run.dof", 
+		toes={'ltoes', 'rtoes'},
+		toes_lpos={ vector3(0,0,0), vector3(0,0,0)},
+		ankles={'lfoot', 'rfoot'},
+		ankles_lpos={vector3(0,-0.05,0), vector3(0,-0.05,0)},
+		filter_size=5,
+		thr_speed=0.45,
+		toelimit={ 0.0439, 0.0439},
+		anklelimit = {0.044, 0.044},
+	}

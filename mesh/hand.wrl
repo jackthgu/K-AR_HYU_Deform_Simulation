@@ -1,0 +1,227 @@
+#wrltosdfast should be executed whenever parameters changes
+DEF SampleRobot Humanoid { 
+	name "left_hand"
+		humanoidBody [
+
+
+			DEF Wrist Joint 
+			{
+				jointType "ball"
+				translation 0.000000 0.00000 0.000000 #공의 위치조절
+				children [
+					Segment
+					{
+						material "lightgrey_transparent"
+						children [
+							Transform { 
+    							translation 0 0.5 0   #첫번째 막대기 위치 조절
+								children 
+								Shape {
+									geometry Box { size 1.2 1.0 0.2 }  #박스를 손바닥으로 대체해서 이건 손바닥 사이즈됨
+								}
+							}
+						]
+					}
+					DEF Finger1_1 Joint    #둘째 손가락 시작점
+					{
+						jointType "ball"
+						translation -0.600000 1.0 0.000000
+						children [
+							Segment {
+								material "lightgrey_transparent"    #박스 색깔(여기선 마디색)
+								children [ 
+									Transform {
+										translation 0 0.12 0        #박스 위치 정하기
+										children
+										Shape {
+											geometry Box { size 0.25 0.25 0.2 }   #박스 크기(여기선 첫번째마디)
+										}
+									}
+								]
+							}  
+							DEF Finger1_2 Joint    
+							{
+								jointType "ball"
+								translation 0.000000 0.25 0.000000
+								children [  
+									Segment {
+										material "lightgrey_transparent"
+										children [
+											Transform {
+												translation 0 0.12 0
+												children
+												Shape {
+													geometry Box { size 0.25 0.25 0.2 }
+												}
+											}
+										]
+									}
+									DEF Finger1_3 Joint
+									{
+										jointType "ball"
+										translation 0.000000 0.25 0.000000
+										children[
+											Segment {
+												material "lightgrey_transparent"
+												children [
+													Transform {
+														translation 0 0.12 0
+														children
+														Shape {
+															geometry Box { size 0.25 0.25 0.2 }
+														}	
+													}
+												]
+											}	
+										]
+									}
+
+								]
+							}
+						]
+
+					}
+			    	DEF Finger2_1 Joint   #세번째 손가락 시작점
+					{
+						jointType "ball"
+						translation -0.2000000 1.0 0.000000
+						children [  #공안에 종속된 공을 만드려면 children 을 써서 포함시켜줘야됨
+							Segment
+							{
+								material "lightgrey_transparent"
+								children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.25 0.2 }}}]
+							}                             
+							DEF Finger2_2 Joint
+							{
+								jointType "ball"
+								translation 0.000000 0.25 0.000000
+								children [
+									Segment
+									{
+										material "lightgrey_transparent"
+										children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.25 0.2 }}}]
+									}		                             
+									DEF Finger2_3 Joint
+									{
+										jointType "ball"
+										translation  0.000000 0.25 0.000000
+										children [
+												Segment
+												{
+													material "lightgrey_transparent"
+													children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.25 0.2 }}}]
+												}		        
+										]                     
+									}
+								]
+							}            
+						]
+					}
+			    	DEF Finger3_1 Joint   #네번째 손가락 시작점
+					{
+						jointType "ball"
+						translation 0.2000000 1.0 0.000000
+						children [  
+							Segment
+							{
+								material "lightgrey_transparent"
+								children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.25 0.2 }}}]
+							}                             
+							DEF Finger3_2 Joint
+							{
+								jointType "ball"
+								translation 0.000000 0.25 0.000000
+								children [
+									Segment
+									{
+										material "lightgrey_transparent"
+										children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.25 0.2 }}}]
+									}		                             
+									DEF Finger3_3 Joint
+									{
+										jointType "ball"
+										translation  0.000000 0.25 0.000000
+										children [
+												Segment
+												{
+													material "lightgrey_transparent"
+													children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.25 0.2 }}}]
+												}		        
+										]                     
+									}
+								]
+							}            
+						]
+					}
+			    	DEF Finger4_1 Joint   #새끼 손가락 시작점
+					{
+						jointType "ball"
+						translation 0.6000000 1.0 0.000000
+						children [  
+							Segment
+							{
+								material "lightgrey_transparent"
+								children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.25 0.2 }}}]
+							}                             
+							DEF Finger4_2 Joint
+							{
+								jointType "ball"
+								translation 0.000000 0.25 0.000000
+								children [
+									Segment
+									{
+										material "lightgrey_transparent"
+										children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.25 0.2 }}}]
+									}		                             
+									DEF Finger4_3 Joint
+									{
+										jointType "ball"
+										translation  0.000000 0.25 0.000000
+										children [
+												Segment
+												{
+													material "lightgrey_transparent"
+													children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.25 0.2 }}}]
+												}		        
+										]                     
+									}
+								]
+							}            
+						]
+					}
+					DEF Wrist_thumb Joint   #엄지 손가락을 더 자유롭게 움직이기 위해 손목부분에 새롭게 공을 하나더 만듬
+					{
+						jointType "ball"
+						translation -0.10000 0.00000 0.00000
+						children[
+							DEF Finger5_1 Joint    #엄지 손가락 시작점
+							{
+								jointType "ball"
+								translation -0.750000 0.5 0.000000
+								children [
+									Segment
+									{
+										material "lightgrey_transparent"
+										children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.2 0.2 }}}]
+									}                             
+									DEF Finger5_2 Joint
+									{
+										jointType "ball"
+										translation -0.000000  0.20 0.000000
+										children[
+												Segment
+												{
+													material "lightgrey_transparent"
+													children [ Transform { translation 0 0.12 0 children Shape {geometry Box { size 0.25 0.2 0.2 }}}]
+												}		
+										]	                             
+									}
+								]	
+							}
+						]
+					}	
+				]
+			} # Pole
+
+	]
+}

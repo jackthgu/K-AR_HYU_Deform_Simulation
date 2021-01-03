@@ -1,0 +1,40 @@
+= TODO =
+* Baraff paper 이해.
+* (BulletSoftBody/softbody2/Physics* 에 구현되어 있음)
+* 알고나면 간단함.
+* 
+*  BulletSoftBody/softbody2/Physics_ParticleSystem.cpp :1032 
+*       
+				if(bApplyFrictionForce && VECTOR3_DP(m_vContactForce[i], mContacts.prevNormal[i])>0.0001)
+* 현재 마찰 관련 기능이 구림. QP 로 고칠 필요 있음?
+* BulletSoftBody/btSoftBody2.cpp ->  line 794
+			psb->m_pSystem->mContacts.setContacts(c.m_node->m_index, 
+
+* F5: 소스코드 이동 Shift-F5: 돌아가기. 
+* ctrl+g 파일이름 (파일 열기)
+* :e 파일이름 (현재 경로 파일 열기)
+* vi ../../doc/index.wiki  하면 일반적인 설명 볼수 있음. (또는 make doc)
+* b0, b1, b2 ,b3 화면 밝기 조정 
+* - debugger
+* make debug
+* make cgdb
+* 	:help
+* 	위쪽창에서 (esc)
+* 		o : 파일목록
+* 		/Flexi<Return> n b <Return>	처서 파일 선택
+* 		/startWorld  <space>치면 브레이크포인트 (빨간색)
+*
+* 	i 쳐서 아래쪽으로 내려가서
+* 	run
+* 	s (step-in)
+* 	fini (step-out)
+* 	n (next - 위쪽에서는 F8) 
+* 
+* 알아내야하는 것: 왜 contactForce가 시작부터 non-zero인지.
+* 
+*
+*
+* spring edit. (too many springs on tails)
+* structural spring vs muscles	
+* 
+*

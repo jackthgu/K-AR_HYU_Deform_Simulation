@@ -1,0 +1,35 @@
+material Ground_Sand
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.745098 0.694118 0.494118
+            diffuse 0.788235 0.745098 0.576471
+            specular 0.9 0.9 0.9 0.0
+            emissive 0.223529 0.223529 0.223529
+            texture_unit
+            {
+                texture Sand3.jpg 
+            }
+        }
+    }
+}
+
+
+material Transparent
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			// Texture unit 0
+		        texture_unit 
+            		{
+				colour_op_ex source1 src_manual src_current 0 0 0
+		        }
+		}
+	}
+}
+

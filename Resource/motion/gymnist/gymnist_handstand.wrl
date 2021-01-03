@@ -1,0 +1,342 @@
+DEF SampleRobot Humanoid { 
+ name "gymnist"
+frameRate 120
+ humanoidBody [
+
+  DEF pelvis Joint 
+  {
+    jointType "free"
+    jointAxis "Z"
+    translation 0.000000 0.000000 0.000000
+    children [
+      Segment 
+      {
+        centerOfMass 0.002636 0.027012 -0.008214
+        mass 8.193672
+        momentsOfInertia [0.042735 -0.000100 -0.000004 -0.000100 0.060512 0.000505 -0.000004 0.000505 0.053091]
+        children [ Transform { rotation 0.350839 0.583172 -0.732682 2.271319 translation 1.204923 1.495021 1.922465 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/pelvis.obj"}}]
+      }
+      DEF lfemur Joint 
+      {
+        jointType "rotate"
+        jointAxis "YZX"
+        translation 0.097957 0.000000 -0.000000
+        children [
+          Segment 
+          {
+            centerOfMass -0.018637 -0.172492 -0.002112
+            mass 6.283260
+            momentsOfInertia [0.073287 -0.000870 -0.000598 -0.000870 0.016998 0.000672 -0.000598 0.000672 0.070622]
+            children [ Transform { rotation 0.455886 0.630685 -0.628016 2.250783 translation 0.728953 1.018110 2.363983 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/lfemur.obj"}}]
+          }
+          DEF ltibia Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 -0.384376 0.000000
+            children [
+              Segment 
+              {
+                centerOfMass -0.004900 -0.169609 -0.005386
+                mass 2.496320
+                momentsOfInertia [0.023969 0.000805 0.000038 0.000805 0.002731 0.000271 0.000038 0.000271 0.023846]
+                children [ Transform { rotation 0.450940 0.624264 -0.637924 2.239046 translation 0.728953 1.463203 2.326890 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/ltibia.obj"}}]
+              }
+              DEF lfoot Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation 0.000000 -0.386348 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.002023 -0.036046 0.049512
+                    mass 1.060815
+                    momentsOfInertia [0.002555 -0.000009 -0.000023 -0.000009 0.002378 -0.000173 -0.000023 -0.000173 0.001133]
+                    children [ Transform { rotation 0.106842 0.171831 -0.979315 1.611024 translation 0.003553 2.905904 -0.960384 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/lfoot.obj"}}]
+                  }
+                  DEF ltoes Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "X"
+                    translation 0.000000 -0.043790 0.105051
+                    children [
+                      Segment 
+                      {
+                        centerOfMass -0.001656 0.023868 0.048970
+                        mass 0.293501
+                        momentsOfInertia [0.000174 0.000003 0.000003 0.000003 0.000242 -0.000014 0.000003 -0.000014 0.000205]
+                        children [ Transform { rotation 0.106842 0.171831 -0.979315 1.611024 translation 0.003553 2.949694 -1.065435 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/ltoes.obj"}}]
+                      }
+                    ]
+                  } # ltoes
+                  
+                ]
+              } # lfoot
+              
+            ]
+          } # ltibia
+          
+        ]
+      } # lfemur
+      
+      DEF rfemur Joint 
+      {
+        jointType "rotate"
+        jointAxis "YZX"
+        translation -0.097957 -0.000000 0.000000
+        children [
+          Segment 
+          {
+            centerOfMass 0.018696 -0.173231 -0.008024
+            mass 6.335061
+            momentsOfInertia [0.074017 0.000687 0.000537 0.000687 0.017435 0.002214 0.000537 0.002214 0.071137]
+            children [ Transform { rotation 0.331657 0.580697 -0.743501 2.375055 translation 1.564963 1.384280 1.806409 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/rfemur.obj"}}]
+          }
+          DEF rtibia Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 -0.391421 0.000000
+            children [
+              Segment 
+              {
+                centerOfMass 0.006658 -0.162799 -0.012137
+                mass 2.468918
+                momentsOfInertia [0.023677 -0.000789 -0.000023 -0.000789 0.002687 0.000618 -0.000023 0.000618 0.023582]
+                children [ Transform { rotation 0.331374 0.580172 -0.744037 2.374532 translation 1.564963 1.778548 1.803607 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/rtibia.obj"}}]
+              }
+              DEF rfoot Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation 0.000000 -0.365463 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.000295 -0.054197 0.046933
+                    mass 1.075232
+                    momentsOfInertia [0.002582 0.000003 -0.000137 0.000003 0.002488 -0.000037 -0.000137 -0.000037 0.001145]
+                    children [ Transform { rotation 0.094242 0.061565 -0.993644 2.319052 translation 2.074015 2.179904 -1.115962 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/rfoot.obj"}}]
+                  }
+                  DEF rtoes Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "X"
+                    translation 0.000000 -0.060008 0.089288
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.015107 0.012331 0.055461
+                        mass 0.302693
+                        momentsOfInertia [0.000185 -0.000003 0.000001 -0.000003 0.000265 -0.000010 0.000001 -0.000010 0.000211]
+                        children [ Transform { rotation 0.094242 0.061565 -0.993644 2.319052 translation 2.074015 2.239912 -1.205250 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/rtoes.obj"}}]
+                      }
+                    ]
+                  } # rtoes
+                  
+                ]
+              } # rfoot
+              
+            ]
+          } # rtibia
+          
+        ]
+      } # rfemur
+      
+      DEF lowerback Joint 
+      {
+        jointType "rotate"
+        jointAxis "YZX"
+        translation -0.000000 0.104523 -0.050000
+        children [
+          Segment 
+          {
+            centerOfMass 0.006929 0.057176 0.064785
+            mass 7.226623
+            momentsOfInertia [0.033702 -0.000838 -0.001023 -0.000838 0.048492 0.002846 -0.001023 0.002846 0.046728]
+            children [ Transform { rotation 0.492388 0.715645 -0.495385 2.474410 translation 0.993575 -0.012334 2.507708 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/lowerback.obj"}}]
+          }
+          DEF upperback Joint 
+          {
+            jointType "rotate"
+            jointAxis "YZX"
+            translation -0.000000 0.174795 0.006060
+            children [
+              Segment 
+              {
+                centerOfMass 0.005561 0.111300 0.043147
+                mass 12.522918
+                momentsOfInertia [0.090052 0.000040 -0.001801 0.000040 0.107955 0.007621 -0.001801 0.007621 0.111042]
+                children [ Transform { rotation 0.362856 0.490247 -0.792460 2.137419 translation 0.970987 1.636601 1.912896 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/upperback.obj"}}]
+              }
+              DEF lclavicle Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation -0.000000 0.219760 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.118176 -0.029946 0.007286
+                    mass 0.663662
+                    momentsOfInertia [0.000666 0.000193 -0.000018 0.000193 0.001019 0.000058 -0.000018 0.000058 0.000931]
+                    children [ Transform { rotation 0.600205 0.342371 -0.722867 1.967443 translation -0.030631 1.373141 2.173240 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/lclavicle.obj"}}]
+                  }
+                  DEF lhumerus Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "YZX"
+                    translation 0.143498 -0.071404 -0.000000
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.006475 -0.131853 -0.002942
+                        mass 1.549964
+                        momentsOfInertia [0.007271 -0.000576 -0.000010 -0.000576 0.001617 0.000047 -0.000010 0.000047 0.007120]
+                        children [ Transform { rotation 0.990891 0.133195 0.019832 4.597414 translation -2.461782 -0.828179 -0.306192 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/lhumerus.obj"}}]
+                      }
+                      DEF lradius Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "X"
+                        translation 0.000000 -0.264012 0.000000
+                        children [
+                          Segment 
+                          {
+                            centerOfMass 0.001975 -0.095064 0.001927
+                            mass 0.899042
+                            momentsOfInertia [0.002991 -0.000048 -0.000001 -0.000048 0.000612 0.000025 -0.000001 0.000025 0.002995]
+                            children [ Transform { rotation 0.990305 0.136620 0.025115 4.664762 translation -2.461782 -0.542063 -0.343811 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/lradius.obj"}}]
+                          }
+                          DEF lhand Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "YZX"
+                            translation 0.000000 -0.214450 0.000000
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.015229 -0.074374 0.035294
+                                mass 1.037230
+                                momentsOfInertia [0.002144 0.000563 0.000047 0.000563 0.001847 0.000467 0.000047 0.000467 0.002116]
+                                children [ Transform { rotation 0.809193 -0.157138 0.566140 4.070116 translation -1.170432 1.661828 -1.467760 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/lhand.obj"}}]
+                              }
+                            ]
+                          } # lhand
+                          
+                        ]
+                      } # lradius
+                      
+                    ]
+                  } # lhumerus
+                  
+                ]
+              } # lclavicle
+              
+              DEF rclavicle Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation -0.000000 0.219760 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.099336 -0.021040 0.001879
+                    mass 0.670880
+                    momentsOfInertia [0.000693 -0.000215 -0.000025 -0.000215 0.001018 0.000037 -0.000025 0.000037 0.000955]
+                    children [ Transform { rotation 0.217647 0.588231 -0.778854 2.144317 translation 1.173357 1.584449 1.649904 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/rclavicle.obj"}}]
+                  }
+                  DEF rhumerus Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "YZX"
+                    translation -0.129109 -0.071702 0.000000
+                    children [
+                      Segment 
+                      {
+                        centerOfMass -0.011108 -0.138524 -0.004463
+                        mass 1.541781
+                        momentsOfInertia [0.006681 0.000655 0.000045 0.000655 0.001707 -0.000046 0.000045 -0.000046 0.006502]
+                        children [ Transform { rotation -0.179964 0.748433 0.638326 2.718521 translation 2.056831 -0.490227 1.640293 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/rhumerus.obj"}}]
+                      }
+                      DEF rradius Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "X"
+                        translation 0.000000 -0.285688 0.000000
+                        children [
+                          Segment 
+                          {
+                            centerOfMass -0.000152 -0.073389 -0.003467
+                            mass 0.907922
+                            momentsOfInertia [0.003025 0.000019 0.000001 0.000019 0.000629 0.000088 0.000001 0.000088 0.003015]
+                            children [ Transform { rotation -0.167103 0.710307 0.683770 2.697621 translation 2.056831 -0.400069 1.603852 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/rradius.obj"}}]
+                          }
+                          DEF rhand Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "YZX"
+                            translation 0.000000 -0.190292 0.000000
+                            children [
+                              Segment 
+                              {
+                                centerOfMass -0.000854 -0.087892 0.017527
+                                mass 1.032017
+                                momentsOfInertia [0.002534 -0.000435 -0.000199 -0.000435 0.001401 0.000128 -0.000199 0.000128 0.002159]
+                                children [ Transform { rotation -0.411972 0.621863 0.666007 3.962921 translation 1.091632 2.359258 0.298564 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/rhand.obj"}}]
+                              }
+                            ]
+                          } # rhand
+                          
+                        ]
+                      } # rradius
+                      
+                    ]
+                  } # rhumerus
+                  
+                ]
+              } # rclavicle
+              
+              DEF LowerNeck Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation -0.000000 0.219760 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.002242 0.016636 -0.017753
+                    mass 0.601032
+                    momentsOfInertia [0.000583 0.000021 0.000042 0.000021 0.000955 0.000032 0.000042 0.000032 0.000670]
+                    children [ Transform { rotation 0.483906 0.785157 -0.386475 3.013175 translation 1.554790 -1.429569 1.465738 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/LowerNeck.obj"}}]
+                  }
+                  DEF Neck Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "YZX"
+                    translation -0.000902 0.081792 -0.015791
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.007736 0.038611 0.037781
+                        mass 4.837455
+                        momentsOfInertia [0.010234 -0.000197 -0.000073 -0.000197 0.006891 -0.000628 -0.000073 -0.000628 0.009337]
+                        children [ Transform { rotation 0.653527 0.754657 -0.058264 3.113591 translation 0.493772 -2.486825 0.686447 children Shape {geometry OBJ "../Resource/motion/gymnist/gymnist_handstand_sd/Neck.obj"}}]
+                      }
+                    ]
+                  } # Neck
+                  
+                ]
+              } # LowerNeck
+              
+            ]
+          } # upperback
+          
+        ]
+      } # lowerback
+      
+    ]
+  } # pelvis
+   ]
+}

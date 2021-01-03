@@ -1,0 +1,881 @@
+DEF SampleRobot Humanoid { 
+ name "humanHanyang"
+ humanoidBody [
+
+  DEF Hips Joint 
+  {
+    jointType "free"
+    jointAxis "Z"
+    translation 0.000000 0.000000 0.000000
+    children [
+      Segment 
+      {
+        centerOfMass -0.003487 0.045513 -0.030483
+        mass 8.934952
+        momentsOfInertia [0.057460 -0.000461 0.002664 -0.000461 0.083144 0.001312 0.002664 0.001312 0.073322]
+        children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.000000 -0.000000 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/Hips.obj"}}]
+      }
+      DEF Ab Joint 
+      {
+        jointType "rotate"
+        jointAxis "ZXY"
+        translation -0.000000 0.080386 -0.000000
+        children [
+          Segment 
+          {
+            centerOfMass -0.001041 0.131621 -0.003772
+            mass 8.799719
+            momentsOfInertia [0.058153 0.000116 0.003960 0.000116 0.072782 0.004857 0.003960 0.004857 0.076776]
+            children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.000000 -0.080386 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/Ab.obj"}}]
+          }
+          DEF Chest Joint 
+          {
+            jointType "rotate"
+            jointAxis "ZXY"
+            translation -0.000000 0.257922 -0.000000
+            children [
+              Segment 
+              {
+                centerOfMass 0.005008 0.117268 -0.000252
+                mass 15.064491
+                momentsOfInertia [0.155032 0.003005 0.013856 0.003005 0.154765 0.011889 0.013856 0.011889 0.201212]
+                children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.000000 -0.338308 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/Chest.obj"}}]
+              }
+              DEF Neck Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation -0.000000 0.257922 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.002347 0.040082 0.007597
+                    mass 1.646294
+                    momentsOfInertia [0.004166 0.000075 0.000025 0.000075 0.003990 0.000589 0.000025 0.000589 0.004384]
+                    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.000000 -0.596230 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/Neck.obj"}}]
+                  }
+                  DEF Head Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                    translation -0.000000 0.106944 0.000000
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.000821 0.084265 -0.009973
+                        mass 4.562554
+                        momentsOfInertia [0.026876 0.000618 -0.000191 0.000618 0.018496 0.002579 -0.000191 0.002579 0.023697]
+                        children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.000000 -0.703174 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/Head.obj"}}]
+                      }
+                    ]
+                  } # Head
+                  
+                ]
+              } # Neck
+              
+              DEF LeftCollar Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation -0.000000 0.257922 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.131836 0.012142 0.002155
+                    mass 0.818043
+                    momentsOfInertia [0.001019 0.000221 -0.000087 0.000221 0.001889 0.000064 -0.000087 0.000064 0.001571]
+                    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.000000 -0.596230 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/LeftCollar.obj"}}]
+                  }
+                  DEF LeftShoulder Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                    translation 0.194444 -0.000000 0.000000
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.120352 0.004145 0.005814
+                        mass 2.087894
+                        momentsOfInertia [0.003434 -0.000891 -0.000176 -0.000891 0.011534 -0.000106 -0.000176 -0.000106 0.012101]
+                        children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.194444 -0.596230 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/LeftShoulder.obj"}}]
+                      }
+                      DEF LeftElbow Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "Y"
+                        translation 0.247572 0.000000 0.000000
+                        children [
+                          Segment 
+                          {
+                            centerOfMass 0.121237 0.009751 -0.000804
+                            mass 1.540035
+                            momentsOfInertia [0.001790 0.000504 -0.000116 0.000504 0.008912 -0.000019 -0.000116 -0.000019 0.008977]
+                            children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.442016 -0.596230 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/LeftElbow.obj"}}]
+                          }
+                          DEF LeftWrist Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "ZXY"
+                            translation 0.258152 0.000000 0.000000
+                        	#translation 0.21425177 0.000000 0.000000
+                            children [
+                              Segment 
+                              {
+                                centerOfMass -0.005681 -0.079442 -0.000476
+                                mass 0.915782
+                                momentsOfInertia [0.002111 -0.000147 -0.000060 -0.000147 0.001073 0.000051 -0.000060 0.000051 0.002029]
+                	#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.700168 -0.596230 -0.000000 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LeftWrist2.obj"}}]
+                    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.54137399 -0.44010539 0.000000 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LeftWrist2.obj"}}]
+                              }
+                      		  DEF LThumb1 Joint 
+                          	  {
+                             	 jointType "rotate"
+                             	 jointAxis "AA"
+                             	 jointAxis2 0.000000 1.000000 0.000000 0.000000 -0.785398 0.000000 1.000000 0.000000
+                             	 #translation 5.033683 -3.001600 3.483950
+                             	 translation 0.05033683 -0.03001600 0.03483950
+                             	 children [
+                             	 Segment 
+                              	{
+                               		 centerOfMass 0.000000 0.000000 0.000000
+                               		 mass 0.001000
+                               		 momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -59.1710826 -41.489187 -2.926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LThumb1_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.591710826 -0.41489187 -0.02926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LThumb1_2.obj"}}]
+                              }
+                              DEF LThumb2 Joint 
+                              {
+                                jointType "rotate"
+                                jointAxis "Y"
+                                #translation 3.705272 0.000000 -0.000000
+                                translation 0.03705272 0.000000 -0.000000
+                                children [
+                                  Segment 
+                                  {
+                                    centerOfMass 0.000000 0.000000 0.000000
+                                    mass 0.001000
+                                    momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+				    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -62.876255 -41.489187 -2.926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LThumb2_2.obj"}}]
+				    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.62876255 -0.41489187 -0.02926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LThumb2_2.obj"}}]
+                                  }
+                                  DEF LThumb3 Joint 
+                                  {
+                                    jointType "rotate"
+                                    jointAxis "Y"
+                                    #translation 2.408187 0.000000 0.000000
+                                    translation 0.02408187 0.000000 0.000000
+                                    children [
+                                      Segment 
+                                      {
+                                        centerOfMass 0.000000 0.000000 0.000000
+                                        mass 0.001000
+                                        momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                        #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -77.719575 -49.391899 -3.483950 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LThumb3.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -65.284443 -32.104734 -2.926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LThumb3_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.65284443 -0.32104734 -0.02926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LThumb3_2.obj"}}]
+                                      }
+                                    ]
+                                  } # LThumb3
+                                  
+                                ]
+                              } # LThumb2
+                              
+                            ]
+                          } # LThumb1
+                          
+                          DEF LIndex1 Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "YZ"
+                            #translation 9.35088 0.644750 3.440520
+                            translation 0.0935088 0.00644750 0.03440520
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 0.001000
+                                momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -75.581285 -53.038249 -3.440520 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LIndex1.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -63.488279 -44.552129 -3.440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LIndex1_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.63488279 -0.44552129 -0.03440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LIndex1_2.obj"}}]
+                              }
+                              DEF LIndex2 Joint 
+                              {
+                                jointType "rotate"
+                                jointAxis "Z"
+                                #translation 3.705172 -0.000000 -0.000000
+                                translation 0.03705172 -0.000000 -0.000000
+                                children [
+                                  Segment 
+                                  {
+                                    centerOfMass 0.000000 0.000000 0.000000
+                                    mass 0.001000
+                                    momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -79.992205 -53.038249 -3.440520 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LIndex2.obj"}}]
+				    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -67.1934522 -44.552129 -3.440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LIndex2_2.obj"}}]
+				    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.671934522 -0.44552129 -0.03440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LIndex2_2.obj"}}]
+                                  }
+                                  DEF LIndex3 Joint 
+                                  {
+                                    jointType "rotate"
+                                    jointAxis "Z"
+                                    #translation 2.556456 -0.000000 0.000000
+                                    translation 0.02556456 -0.000000 0.000000
+                                    children [
+                                      Segment 
+                                      {
+                                        centerOfMass 0.000000 0.000000 0.000000
+                                        mass 0.001000
+                                        momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                        #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -83.035605 -53.038249 -3.440520 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LIndex3.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -69.749908 -44.552129 -3.440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LIndex3_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.69749908 -0.44552129 -0.03440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LIndex3_2.obj"}}]
+                                      }
+                                    ]
+                                  } # LIndex3
+                                  
+                                ]
+                              } # LIndex2
+                              
+                            ]
+                          } # LIndex1
+                          
+                          DEF LMiddle1 Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "YZ"
+                            #translation 9.792384 0.731000 0.931610
+                            translation 0.09792384 0.00731000 0.00931610
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 0.001000
+                                momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -76.106885 -53.124499 -0.931610 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LMiddle1.obj"}}]
+				#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -63.929783 -44.624579 -0.931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LMiddle1_2.obj"}}]
+				children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.63929783 -0.44624579 -0.00931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LMiddle1_2.obj"}}]
+                              }
+                              DEF LMiddle2 Joint 
+                              {
+                                jointType "rotate"
+                                jointAxis "Z"
+                                #translation 3.705172 0.000000 -0.000000
+                                translation 0.03705172 0.000000 -0.000000
+                                children [
+                                  Segment 
+                                  {
+                                    centerOfMass 0.000000 0.000000 0.000000
+                                    mass 0.001000
+                                    momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -80.517805 -53.124499 -0.931610 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LMiddle2.obj"}}]
+				    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -67.634956 -44.624579 -0.931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LMiddle2_2.obj"}}]
+				    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.67634956 -0.44624579 -0.00931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LMiddle2_2.obj"}}]
+                                  }
+                                  DEF LMiddle3 Joint 
+                                  {
+                                    jointType "rotate"
+                                    jointAxis "Z"
+                                    #translation 3.210169 -0.000000 -0.000000
+                                    translation 0.03210169 -0.000000 -0.000000
+                                    children [
+                                      Segment 
+                                      {
+                                        centerOfMass 0.000000 0.000000 0.000000
+                                        mass 0.001000
+                                        momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                        #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -84.339435 -53.124499 -0.931610 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LMiddle3.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -70.845125 -44.624579 -0.931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LMiddle3_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.70845125 -0.44624579 -0.00931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LMiddle3_2.obj"}}]
+                                      }
+                                    ]
+                                  } # LMiddle3
+                                  
+                                ]
+                              } # LMiddle2
+                              
+                            ]
+                          } # LMiddle1
+                          
+                          DEF LRing1 Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "YZ"
+                            #translation 9.667644 0.537180 -1.769640
+                            translation 0.09667644 0.00537180 -0.01769640
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 0.001000
+                                momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -75.958385 -52.930679 1.769640 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LRing1.obj"}}]
+				#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -63.805043 -44.461770 1.769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LRing1_2.obj"}}]
+				children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.63805043 -0.44461770 0.01769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LRing1_2.obj"}}]
+                              }
+                              DEF LRing2 Joint 
+                              {
+                                jointType "rotate"
+                                jointAxis "Z"
+                                #translation 3.20313 0.000000 0.000000
+                                translation 0.0320313 0.000000 0.000000
+                                children [
+                                  Segment 
+                                  {
+                                    centerOfMass 0.000000 0.000000 0.000000
+                                    mass 0.001000
+                                    momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -79.771635 -52.930679 1.769640 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LRing2.obj"}}]
+				    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -67.008173 -44.461770 1.769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LRing2_2.obj"}}]
+				    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.67008173 -0.44461770 0.01769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LRing2_2.obj"}}]
+                                  }
+                                  DEF LRing3 Joint 
+                                  {
+                                    jointType "rotate"
+                                    jointAxis "Z"
+                                    #translation 2.743616 0.000000 0.000000
+                                    translation 0.02743616 0.000000 0.000000
+                                    children [
+                                      Segment 
+                                      {
+                                        centerOfMass 0.000000 0.000000 0.000000
+                                        mass 0.001000
+                                        momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                        #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -83.037845 -52.930679 1.769640 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LRing3.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -69.751790 -44.461770 1.769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LRing3_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.69751790 -0.44461770 0.01769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LRing3_2.obj"}}]
+                                      }
+                                    ]
+                                  } # LRing3
+                                  
+                                ]
+                              } # LRing2
+                              
+                            ]
+                          } # LRing1
+                          
+                          DEF LLittle1 Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "YZ"
+                            #translation 8.326584 -0.341960 -3.660480
+                            translation 0.08326584 -0.00341960 -0.03660480
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 0.001000
+                                momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -75.861885 -52.051539 3.660480 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LLittle1.obj"}}]	
+				#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -63.723983 -43.723293 3.660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LLittle1_2.obj"}}]
+				children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.63723983 -0.43723293 0.03660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LLittle1_2.obj"}}]
+                              }
+                              DEF LLittle2 Joint 
+                              {
+                                jointType "rotate"
+                                jointAxis "Z"
+                                #translation 2.587225 -0.000000 -0.000000
+                                translation 0.02587225 -0.000000 -0.000000
+                                children [
+                                  Segment 
+                                  {
+                                    centerOfMass 0.000000 0.000000 0.000000
+                                    mass 0.001000
+                                    momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -78.941915 -52.051539 3.660480 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LLittle2.obj"}}]
+				    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -66.311209 -43.723293 3.660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LLittle2_2.obj"}}]
+				    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.66311209 -0.43723293 0.03660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LLittle2_2.obj"}}]
+                                  }
+                                  DEF LLittle3 Joint 
+                                  {
+                                    jointType "rotate"
+                                    jointAxis "Z"
+                                    #translation 1.803572 -0.000000 -0.000000
+                                    translation 0.01803572 -0.000000 -0.000000
+                                    children [
+                                      Segment 
+                                      {
+                                        centerOfMass 0.000000 0.000000 0.000000
+                                        mass 0.001000
+                                        momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                        #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -81.089025 -52.051539 3.660480 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/LLittle3.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -68.114781 -43.723293 3.660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LLittle3_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.68114781 -0.43723293 0.03660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/LLittle3_2.obj"}}]
+                                      }
+                                    ]
+                                  } # LLittle3
+                                  
+                                ]
+                              } # LLittle2
+                              
+                            ]
+                          } # LLittle1
+                            ]
+                          } # LeftWrist
+                          
+                        ]
+                      } # LeftElbow
+                      
+                    ]
+                  } # LeftShoulder
+                  
+                ]
+              } # LeftCollar
+              
+              DEF RightCollar Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation -0.000000 0.257922 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.109290 0.031237 0.012176
+                    mass 0.882704
+                    momentsOfInertia [0.001070 -0.000081 0.000044 -0.000081 0.002248 0.000053 0.000044 0.000053 0.001829]
+                    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.000000 -0.596230 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/RightCollar.obj"}}]
+                  }
+                  DEF RightShoulder Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                    translation -0.194444 0.000000 0.000000
+                    children [
+                      Segment 
+                      {
+                        centerOfMass -0.104959 0.001953 0.010615
+                        mass 2.066407
+                        momentsOfInertia [0.003299 0.000412 -0.000126 0.000412 0.011422 -0.000088 -0.000126 -0.000088 0.011920]
+                        children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.194444 -0.596230 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/RightShoulder.obj"}}]
+                      }
+                      DEF RightElbow Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "Y"
+                        translation -0.247572 0.000000 0.000000
+                        children [
+                          Segment 
+                          {
+                            centerOfMass -0.117539 0.006207 0.000303
+                            mass 1.546087
+                            momentsOfInertia [0.001771 -0.000328 0.000116 -0.000328 0.009034 -0.000021 0.000116 -0.000021 0.009080]
+                            children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.442016 -0.596230 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/RightElbow.obj"}}]
+                          }
+                          DEF RightWrist Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "ZXY"
+                            translation -0.258152 0.000000 0.000000
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.004950 -0.077310 -0.004086
+                                mass 0.937282
+                                momentsOfInertia [0.002215 0.000066 0.000035 0.000066 0.001112 0.000096 0.000035 0.000096 0.002066]
+                #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.700168 -0.596230 -0.000000 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/RightWrist2.obj"}}]
+			    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.54137399 -0.44010539 0.000000 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/RightWrist2.obj"}}]
+                              }
+                          DEF Thumb1 Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "AA"
+                            jointAxis2 0.000000 1.000000 0.000000 0.000000 0.785398 0.000000 1.000000 0.000000
+                            #translation 5.033683 -3.001600 -3.483950
+                            translation 0.05033683 -0.03001600 -0.03483950
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 0.001000
+                                momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 58.456805 -49.391899 3.483950 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Thumb1.obj"}}]
+				#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 49.103716 -41.489195 2.926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Thumb1_2.obj"}}]
+				children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.49103716 -0.41489195 0.02926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Thumb1_2.obj"}}]
+                              }
+                              DEF Thumb2 Joint 
+                              {
+                                jointType "rotate"
+                                jointAxis "Y"
+                                #translation 3.705272 0.000000 -0.000000
+                                translation 0.03705272 0.000000 -0.000000
+                                children [
+                                  Segment 
+                                  {
+                                    centerOfMass 0.000000 0.000000 0.000000
+                                    mass 0.001000
+                                    momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 54.045885 -49.391899 3.483950 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Thumb2.obj"}}]
+				    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 45.398543 -41.489195 2.926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Thumb2_2.obj"}}]
+				    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.45398543 -0.41489195 0.02926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Thumb2_2.obj"}}]
+                                  }
+                                  DEF Thumb3 Joint 
+                                  {
+                                    jointType "rotate"
+                                    jointAxis "Y"
+                                    #translation 2.408187 0.000000 0.000000
+                                    translation 0.02408187 0.000000 0.000000
+                                    children [
+                                      Segment 
+                                      {
+                                        centerOfMass 0.000000 0.000000 0.000000
+                                        mass 0.001000
+                                        momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                        #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 51.178995 -49.391899 3.483950 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Thumb3.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 42.990356 -32.399745 2.926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Thumb3_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.42990356 -0.32399745 0.02926518 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Thumb3_2.obj"}}]
+                                      }
+                                    ]
+                                  } # Thumb3
+                                  
+                                ]
+                              } # Thumb2
+                              
+                            ]
+                          } # Thumb1
+                          
+                          DEF Index1 Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "YZ"
+                            #translation 9.35088 0.644750 -3.440520
+                            translation 0.0935088 0.00644750 -0.03440520
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 0.001000
+                                momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 53.317285 -53.038249 3.440520 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Index1.obj"}}]
+				#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 44.786519 -44.552129 3.440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Index1_2.obj"}}]
+				children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.44786519 -0.44552129 0.03440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Index1_2.obj"}}]
+                              }
+                              DEF Index2 Joint 
+                              {
+                                jointType "rotate"
+                                jointAxis "Z"
+                                #translation 3.705172 -0.000000 -0.000000
+                                translation 0.03705172 -0.000000 -0.000000
+                                children [
+                                  Segment 
+                                  {
+                                    centerOfMass 0.000000 0.000000 0.000000
+                                    mass 0.001000
+                                    momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 48.906365 -53.038249 3.440520 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Index2.obj"}}]
+				    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 41.081347 -44.332129 3.440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Index2_2.obj"}}]
+				    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.41081347 -0.44332129 0.03440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Index2_2.obj"}}]
+                                  }
+                                  DEF Index3 Joint 
+                                  {
+                                    jointType "rotate"
+                                    jointAxis "Z"
+                                    #translation 2.556456 0.000000 -0.000000
+                                    translation 0.02556456 0.000000 -0.000000
+                                    children [
+                                      Segment 
+                                      {
+                                        centerOfMass 0.000000 0.000000 0.000000
+                                        mass 0.001000
+                                        momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                        #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 45.862965 -53.038249 3.440520 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Index3.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 38.524891 -44.332129 3.440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Index3_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.38524891 -0.44332129 0.03440520 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Index3_2.obj"}}]
+                                      }
+                                    ]
+                                  } # Index3
+                                  
+                                ]
+                              } # Index2
+                              
+                            ]
+                          } # Index1
+                          
+                          DEF Middle1 Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "YZ"
+                            #translation 9.792384 0.731000 -0.931610
+                            translation 0.09792384 0.00731000 -0.00931610
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 0.001000
+                                momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 52.791685 -53.124499 0.931610 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Middle1.obj"}}]
+				#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 44.345015 -44.624579 0.931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Middle1_2.obj"}}]
+				children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.44345015 -0.44624579 0.00931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Middle1_2.obj"}}]
+                              }
+                              DEF Middle2 Joint 
+                              {
+                                jointType "rotate"
+                                jointAxis "Z"
+                                #translation 3.705172 0.000000 -0.000000
+                                translation 0.03705172 0.000000 -0.000000
+                                children [
+                                  Segment 
+                                  {
+                                    centerOfMass 0.000000 0.000000 0.000000
+                                    mass 0.001000
+                                    momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 48.380765 -53.124499 0.931610 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Middle2.obj"}}]
+				    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 40.639843 -44.624579 0.931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Middle2_2.obj"}}]
+				    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.40639843 -0.44624579 0.00931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Middle2_2.obj"}}]
+                                  }
+                                  DEF Middle3 Joint 
+                                  {
+                                    jointType "rotate"
+                                    jointAxis "Z"
+                                    #translation 3.210169 -0.000000 -0.000000
+                                    translation 0.03210169 -0.000000 -0.000000
+                                    children [
+                                      Segment 
+                                      {
+                                        centerOfMass 0.000000 0.000000 0.000000
+                                        mass 0.001000
+                                        momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                        #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 44.559135 -53.124499 0.931610 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Middle3.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 37.429673 -44.624579 0.931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Middle3_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.37429673 -0.44624579 0.00931610 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Middle3_2.obj"}}]
+                                      }
+                                    ]
+                                  } # Middle3
+                                  
+                                ]
+                              } # Middle2
+                              
+                            ]
+                          } # Middle1
+                          
+                          DEF Ring1 Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "YZ"
+                            #translation 9.667644 0.537180 1.769640
+                            translation 0.09667644 0.00537180 0.01769640
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 0.001000
+                                momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 52.940185 -52.930679 -1.769640 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Ring1.obj"}}]
+				#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 44.469756 -44.461770 -1.769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Ring1_2.obj"}}]
+				children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.44469756 -0.44461770 -0.01769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Ring1_2.obj"}}]
+                              }
+                              DEF Ring2 Joint 
+                              {
+                                jointType "rotate"
+                                jointAxis "Z"
+                                #translation 3.20313 0.000000 0.000000
+                                translation 0.0320313 0.000000 0.000000
+                                children [
+                                  Segment 
+                                  {
+                                    centerOfMass 0.000000 0.000000 0.000000
+                                    mass 0.001000
+                                    momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 49.126935 -52.930679 -1.769640 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Ring2.obj"}}]
+				    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 41.266625 -44.461770 -1.769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Ring2_2.obj"}}]
+				    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.41266625 -0.44461770 -0.01769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Ring2_2.obj"}}]
+                                  }
+                                  DEF Ring3 Joint 
+                                  {
+                                    jointType "rotate"
+                                    jointAxis "Z"
+                                    #translation 2.743616 0.000000 0.000000
+                                    translation 0.02743616 0.000000 0.000000
+                                    children [
+                                      Segment 
+                                      {
+                                        centerOfMass 0.000000 0.000000 0.000000
+                                        mass 0.001000
+                                        momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                        #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 45.860725 -52.930679 -1.769640 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Ring3.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 38.523009 -44.461770 -1.769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Ring3_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.38523009 -0.44461770 -0.01769640 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Ring3_2.obj"}}]
+                                      }
+                                    ]
+                                  } # Ring3
+                                  
+                                ]
+                              } # Ring2
+                              
+                            ]
+                          } # Ring1
+                          
+                          DEF Little1 Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "YZ"
+                            #translation 8.326984 -0.341960 3.660480
+                            translation 0.08326984 -0.00341960 0.03660480
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 0.001000
+                                momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 53.036685 -52.051539 -3.660480 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Little1.obj"}}]
+				#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 44.550815 -43.723293 -3.660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Little1_2.obj"}}]
+				children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.44550815 -0.43723293 -0.03660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Little1_2.obj"}}]
+                              }
+                              DEF Little2 Joint 
+                              {
+                                jointType "rotate"
+                                jointAxis "Z"
+                                #translation 2.587225 0.000000 -0.000000
+                                translation 0.02587225 0.000000 -0.000000
+                                children [
+                                  Segment 
+                                  {
+                                    centerOfMass 0.000000 0.000000 0.000000
+                                    mass 0.001000
+                                    momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 49.956655 -52.051539 -3.660480 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Little2.obj"}}]
+				    #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 41.963590 -43.723293 -3.660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Little2_2.obj"}}]
+				    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.41963590 -0.43723293 -0.03660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Little2_2.obj"}}]
+                                  }
+                                  DEF Little3 Joint 
+                                  {
+                                    jointType "rotate"
+                                    jointAxis "Z"
+                                    #translation 1.803572 -0.000000 -0.000000
+                                    translation 0.01803572 -0.000000 -0.000000
+                                    children [
+                                      Segment 
+                                      {
+                                        centerOfMass 0.000000 0.000000 0.000000
+                                        mass 0.001000
+                                        momentsOfInertia [0.000010 0.000000 0.000000 0.000000 0.000010 0.000000 0.000000 0.000000 0.000010]
+                                        #children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 47.809545 -52.051539 -3.660480 children Shape {geometry OBJ "../Resource/mocap_manipulation/bvh_files/2/2_skel_glove_forHandIK_reduced_sd/Little3.obj"}}]
+					#children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 40.160018 -43.723293 -3.660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Little3_2.obj"}}]
+					children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.40160018 -0.43723293 -0.03660480 scale 0.01 0.01 0.01 children Shape {geometry OBJ "humanHanyang_sd/Little3_2.obj"}}]
+                                      }
+                                    ]
+                                  } # Little3
+                                  
+                                ]
+                              } # Little2
+                              
+                            ]
+                          } # Little1
+
+                            ]
+                          } # RightWrist
+                          
+                        ]
+                      } # RightElbow
+                      
+                    ]
+                  } # RightShoulder
+                  
+                ]
+              } # RightCollar
+              
+            ]
+          } # Chest
+          
+        ]
+      } # Ab
+      
+      DEF LeftHip Joint 
+      {
+        jointType "rotate"
+        jointAxis "ZXY"
+        translation 0.116667 0.000000 0.000000
+        children [
+          Segment 
+          {
+            centerOfMass -0.022146 -0.187034 -0.012575
+            mass 8.398301
+            momentsOfInertia [0.125284 0.007630 -0.002808 0.007630 0.036245 0.008971 -0.002808 0.008971 0.121726]
+            children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.116667 -0.000000 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/LeftHip.obj"}}]
+          }
+          DEF LeftKnee Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation -0.000000 -0.452828 0.000000
+            children [
+              Segment 
+              {
+                centerOfMass -0.001233 -0.148604 -0.006117
+                mass 2.971819
+                momentsOfInertia [0.032716 0.000137 -0.000037 0.000137 0.004605 0.000090 -0.000037 0.000090 0.032405]
+                children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.116667 0.452828 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/LeftKnee.obj"}}]
+              }
+              DEF LeftAnkle Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation -0.000000 -0.343201 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.000464 -0.027858 0.068809
+                    mass 2.129473
+                    momentsOfInertia [0.012785 -0.000106 0.000236 -0.000106 0.012328 0.000921 0.000236 0.000921 0.003504]
+                    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation -0.116667 0.796029 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/LeftAnkle.obj"}}]
+                  }
+                ]
+              } # LeftAnkle
+              
+            ]
+          } # LeftKnee
+          
+        ]
+      } # LeftHip
+      
+      DEF RightHip Joint 
+      {
+        jointType "rotate"
+        jointAxis "ZXY"
+        translation -0.116667 0.000000 0.000000
+        children [
+          Segment 
+          {
+            centerOfMass 0.010372 -0.185449 -0.004362
+            mass 8.595399
+            momentsOfInertia [0.132960 -0.003633 0.000185 -0.003633 0.035748 0.002722 0.000185 0.002722 0.128515]
+            children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.116667 -0.000000 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/RightHip.obj"}}]
+          }
+          DEF RightKnee Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation -0.000000 -0.452828 0.000000
+            children [
+              Segment 
+              {
+                centerOfMass -0.002711 -0.148870 -0.011135
+                mass 2.966102
+                momentsOfInertia [0.032328 -0.000121 -0.000119 -0.000121 0.004626 0.000468 -0.000119 0.000468 0.032183]
+                children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.116667 0.452828 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/RightKnee.obj"}}]
+              }
+              DEF RightAnkle Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation -0.000000 -0.343201 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.002108 -0.022415 0.073093
+                    mass 2.136663
+                    momentsOfInertia [0.012749 -0.000112 0.000262 -0.000112 0.012042 0.001615 0.000262 0.001615 0.003742]
+                    children [ Transform { rotation -1.000000 -0.000000 -0.000000 1.570796 translation 0.116667 0.796029 -0.000000 children Shape {geometry OBJ "humanHanyang_sd/RightAnkle.obj"}}]
+                  }
+                ]
+              } # RightAnkle
+              
+            ]
+          } # RightKnee
+          
+        ]
+      } # RightHip
+      
+    ]
+  } # Hips
+   ]
+}

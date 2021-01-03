@@ -1,0 +1,42 @@
+HIPS            pelvis
+LEFTHIP         lfemur
+LEFTKNEE        ltibia
+LEFTANKLE       lfoot
+LEFTTOES	ltoes
+RIGHTHIP        rfemur  
+RIGHTKNEE       rtibia
+RIGHTANKLE      rfoot     
+RIGHTTOES	rtoes
+CHEST		lowerback
+CHEST2		upperback
+LEFTCOLLAR	lclavicle
+LEFTSHOULDER    lhumerus
+LEFTELBOW       lradius
+LEFTWRIST       lhand
+RIGHTCOLLAR	rclavicle
+RIGHTSHOULDER   rhumerus
+RIGHTELBOW      rradius
+RIGHTWRIST      rhand
+NECK            Neck
+HEAD 	Neck
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

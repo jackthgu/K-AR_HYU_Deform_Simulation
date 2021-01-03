@@ -1,0 +1,53 @@
+#wrltosdfast should be executed whenever parameters changes
+DEF SampleRobot Humanoid { 
+	name "left_leg"
+		humanoidBody [
+
+		DEF Cart Joint 
+		{
+			jointType "slide"
+			jointAxis "ZX"
+			translation 0.000000 0.000000 0.000000
+			children [
+			Segment 
+			{
+				material "lightgrey_transparent"
+					children [ Transform { children Shape {geometry Box{ size 0.03 0.03 0.03 }}}]
+			}
+			DEF Pole Joint 
+			{
+				jointType "ball"
+				translation 0.000000 0.000000 0.000000
+				children [
+					Segment 
+					{
+						material "lightgrey_transparent"
+						children [ 
+							Transform { 
+								translation 0 0.85 0 
+								children 
+								Shape {
+									geometry Box { size 0.04 1.7 0.04 }
+								}
+							}
+						]
+					}
+					DEF Pole2 Joint
+					{
+						jointType "ball"
+						translation 0.000000 1.8 0.000000
+						children [
+							Segment
+							{
+								material "lightgrey_transparent"
+								children [ Transform { translation 0 0.85 0 children Shape {geometry Box { size 0.04 1.7 0.04 }}}]
+							}
+						]
+					}
+				]
+			} # Pole
+
+			]
+		} # Cart
+	]
+}

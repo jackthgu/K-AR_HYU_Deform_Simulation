@@ -1,0 +1,265 @@
+DEF SampleRobot Humanoid { 
+ name "muaythai1"
+frameRate 60
+humanoidBody [
+DEF HIPS Joint {
+jointType "free"
+  translation 0.000000 0.000000 0.000000
+  children [
+Segment { 
+     centerOfMass 0.000404 0.022376 0.000000
+     mass 0.440691 momentsOfInertia [0.000951 0 0 0 0.000951 0 0 0 0.000951]
+    children [
+    Transform { rotation 0.000000 0.000000 -1.000000 2.060280 translation 0.044810 -0.023871 0.000000
+    children Shape { geometry Cylinder { radius 0.025000 height 0.101543 }}}
+    Transform { rotation 0.000000 -0.000000 1.000000 2.071759 translation -0.043596 -0.023871 0.000000
+    children Shape { geometry Cylinder { radius 0.025000 height 0.099407 }}}
+    Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 0.114870 0.000000
+    children Shape { geometry Cylinder { radius 0.025000 height 0.229741 }}}
+    ]
+    }
+    DEF LEFTHIP Joint {
+    jointType "rotate"
+    jointAxis "ZXY"
+      translation 0.089619 -0.047742 0.000000
+      children [
+    Segment { 
+         centerOfMass 0.000000 -0.199309 -0.001867
+         mass 0.408635 momentsOfInertia [0.006824 0 0 0 0.006824 0 0 0 0.006824]
+        children [
+        Transform { rotation 0.000000 0.004684 0.999989 3.141593 translation 0.000000 -0.199309 -0.001867
+        children Shape { geometry Cylinder { radius 0.025000 height 0.398635 }}}
+        ]
+        }
+        DEF LEFTKNEE Joint {
+        jointType "rotate"
+        jointAxis "X"
+          translation 0.000000 -0.398618 -0.003734
+          children [
+        Segment { 
+             centerOfMass -0.000473 -0.202110 -0.010268
+             mass 0.414741 momentsOfInertia [0.007134 0 0 0 0.007134 0 0 0 0.007134]
+            children [
+            Transform { rotation -0.998941 0.000000 0.046007 3.090777 translation -0.000473 -0.202110 -0.010268
+            children Shape { geometry Cylinder { radius 0.025000 height 0.404741 }}}
+            ]
+            }
+            DEF LEFTANKLE Joint {
+            jointType "rotate"
+            jointAxis "ZXY"
+              translation -0.000946 -0.404219 -0.020536
+              children [
+            Segment { 
+                 centerOfMass -0.000132 -0.034515 0.063237
+                 mass 0.154086 momentsOfInertia [0.000366 0 0 0 0.000366 0 0 0 0.000366]
+                children [
+                Transform { rotation 0.999998 -0.000000 0.002094 2.070407 translation -0.000132 -0.034515 0.063237
+                children Shape { geometry Cylinder { radius 0.025000 height 0.144086 }}}
+                ]
+                }
+                ]
+            }]
+        }]
+    }DEF RIGHTHIP Joint {
+    jointType "rotate"
+    jointAxis "ZXY"
+      translation -0.087192 -0.047742 0.000000
+      children [
+    Segment { 
+         centerOfMass -0.001213 -0.199309 -0.001867
+         mass 0.408643 momentsOfInertia [0.006824 0 0 0 0.006824 0 0 0 0.006824]
+        children [
+        Transform { rotation 0.000000 0.004684 0.999989 3.135505 translation -0.001213 -0.199309 -0.001867
+        children Shape { geometry Cylinder { radius 0.025000 height 0.398643 }}}
+        ]
+        }
+        DEF RIGHTKNEE Joint {
+        jointType "rotate"
+        jointAxis "X"
+          translation -0.002427 -0.398618 -0.003734
+          children [
+        Segment { 
+             centerOfMass 0.000473 -0.202110 -0.010268
+             mass 0.414741 momentsOfInertia [0.007134 0 0 0 0.007134 0 0 0 0.007134]
+            children [
+            Transform { rotation -0.998941 0.000000 -0.046007 3.090777 translation 0.000473 -0.202110 -0.010268
+            children Shape { geometry Cylinder { radius 0.025000 height 0.404741 }}}
+            ]
+            }
+            DEF RIGHTANKLE Joint {
+            jointType "rotate"
+            jointAxis "ZXY"
+              translation 0.000946 -0.404219 -0.020536
+              children [
+            Segment { 
+                 centerOfMass 0.000132 -0.034515 0.063237
+                 mass 0.154086 momentsOfInertia [0.000366 0 0 0 0.000366 0 0 0 0.000366]
+                children [
+                Transform { rotation 0.999998 0.000000 -0.002094 2.070407 translation 0.000132 -0.034515 0.063237
+                children Shape { geometry Cylinder { radius 0.025000 height 0.144086 }}}
+                ]
+                }
+                ]
+            }]
+        }]
+    }DEF CHEST Joint {
+    jointType "rotate"
+    jointAxis "ZXY"
+      translation 0.000000 0.229741 0.000000
+      children [
+    Segment { 
+         centerOfMass 0.000000 0.117548 -0.002449
+         mass 0.750715 momentsOfInertia [0.004701 0 0 0 0.004701 0 0 0 0.004701]
+        children [
+        Transform { rotation -0.122662 0.000000 -0.992449 0.396985 translation 0.043599 0.104785 -0.005389
+        children Shape { geometry Cylinder { radius 0.025000 height 0.227242 }}}
+        Transform { rotation -0.122662 0.000000 0.992449 0.396985 translation -0.043599 0.104785 -0.005389
+        children Shape { geometry Cylinder { radius 0.025000 height 0.227242 }}}
+        Transform { rotation 1.000000 0.000000 0.000000 0.023963 translation 0.000000 0.143074 0.003429
+        children Shape { geometry Cylinder { radius 0.025000 height 0.286230 }}}
+        ]
+        }
+        DEF LEFTCOLLAR Joint {
+        jointType "rotate"
+        jointAxis "ZXY"
+          translation 0.087198 0.209570 -0.010777
+          children [
+        Segment { 
+             centerOfMass 0.048008 0.003919 0.002939
+             mass 0.106514 momentsOfInertia [0.000121 0 0 0 0.000121 0 0 0 0.000121]
+            children [
+            Transform { rotation 0.061110 0.000000 -0.998131 1.489496 translation 0.048008 0.003919 0.002939
+            children Shape { geometry Cylinder { radius 0.025000 height 0.096514 }}}
+            ]
+            }
+            DEF LEFTSHOULDER Joint {
+            jointType "rotate"
+            jointAxis "ZXY"
+              translation 0.096015 0.007838 0.005878
+              children [
+            Segment { 
+                 centerOfMass 0.000000 -0.128347 -0.008328
+                 mass 0.267234 momentsOfInertia [0.001908 0 0 0 0.001908 0 0 0 0.001908]
+                children [
+                Transform { rotation -1.000000 0.000000 0.000000 3.076798 translation 0.000000 -0.128347 -0.008328
+                children Shape { geometry Cylinder { radius 0.025000 height 0.257234 }}}
+                ]
+                }
+                DEF LEFTELBOW Joint {
+                jointType "rotate"
+                jointAxis "ZXY"
+                  translation 0.000000 -0.256694 -0.016656
+                  children [
+                Segment { 
+                     centerOfMass -0.000466 -0.131089 0.001957
+                     mass 0.272209 momentsOfInertia [0.002017 0 0 0 0.002017 0 0 0 0.002017]
+                    children [
+                    Transform { rotation -0.000000 -0.007466 0.999972 3.138037 translation -0.000466 -0.131089 0.001957
+                    children Shape { geometry Cylinder { radius 0.025000 height 0.262209 }}}
+                    ]
+                    }
+                    DEF LEFTWRIST Joint {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                      translation -0.000932 -0.262178 0.003915
+                      children [
+                    Segment { 
+                         centerOfMass 0.000000 -0.085565 0.000000
+                         mass 0.181131 momentsOfInertia [0.000594 0 0 0 0.000594 0 0 0 0.000594]
+                        children [
+                        Transform { rotation 0.000000 0.000000 1.000000 3.141593 translation 0.000000 -0.085565 0.000000
+                        children Shape { geometry Cylinder { radius 0.025000 height 0.171131 }}}
+                        ]
+                        }
+                        ]
+                    }]
+                }]
+            }]
+        }DEF RIGHTCOLLAR Joint {
+        jointType "rotate"
+        jointAxis "ZXY"
+          translation -0.087198 0.209570 -0.010777
+          children [
+        Segment { 
+             centerOfMass -0.048008 0.003919 0.002939
+             mass 0.106514 momentsOfInertia [0.000121 0 0 0 0.000121 0 0 0 0.000121]
+            children [
+            Transform { rotation 0.061110 -0.000000 0.998131 1.489496 translation -0.048008 0.003919 0.002939
+            children Shape { geometry Cylinder { radius 0.025000 height 0.096514 }}}
+            ]
+            }
+            DEF RIGHTSHOULDER Joint {
+            jointType "rotate"
+            jointAxis "ZXY"
+              translation -0.096015 0.007838 0.005878
+              children [
+            Segment { 
+                 centerOfMass 0.000000 -0.128347 -0.008328
+                 mass 0.267234 momentsOfInertia [0.001908 0 0 0 0.001908 0 0 0 0.001908]
+                children [
+                Transform { rotation -1.000000 0.000000 0.000000 3.076798 translation 0.000000 -0.128347 -0.008328
+                children Shape { geometry Cylinder { radius 0.025000 height 0.257234 }}}
+                ]
+                }
+                DEF RIGHTELBOW Joint {
+                jointType "rotate"
+                jointAxis "ZXY"
+                  translation 0.000000 -0.256694 -0.016656
+                  children [
+                Segment { 
+                     centerOfMass 0.000462 -0.129815 0.001957
+                     mass 0.269662 momentsOfInertia [0.001961 0 0 0 0.001961 0 0 0 0.001961]
+                    children [
+                    Transform { rotation -0.000000 -0.007539 0.999972 3.145149 translation 0.000462 -0.129815 0.001957
+                    children Shape { geometry Cylinder { radius 0.025000 height 0.259662 }}}
+                    ]
+                    }
+                    DEF RIGHTWRIST Joint {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                      translation 0.000923 -0.259631 0.003915
+                      children [
+                    Segment { 
+                         centerOfMass 0.000000 -0.085565 0.000000
+                         mass 0.181131 momentsOfInertia [0.000594 0 0 0 0.000594 0 0 0 0.000594]
+                        children [
+                        Transform { rotation 0.000000 0.000000 1.000000 3.141593 translation 0.000000 -0.085565 0.000000
+                        children Shape { geometry Cylinder { radius 0.025000 height 0.171131 }}}
+                        ]
+                        }
+                        ]
+                    }]
+                }]
+            }]
+        }DEF NECK Joint {
+        jointType "rotate"
+        jointAxis "ZXY"
+          translation 0.000000 0.286148 0.006858
+          children [
+        Segment { 
+             centerOfMass 0.000000 0.045558 0.006368
+             mass 0.102002 momentsOfInertia [0.000106 0 0 0 0.000106 0 0 0 0.000106]
+            children [
+            Transform { rotation 1.000000 0.000000 0.000000 0.138885 translation 0.000000 0.045558 0.006368
+            children Shape { geometry Cylinder { radius 0.025000 height 0.092002 }}}
+            ]
+            }
+            DEF HEAD Joint {
+            jointType "rotate"
+            jointAxis "ZXY"
+              translation 0.000000 0.091117 0.012737
+              children [
+            Segment { 
+                 centerOfMass 0.000000 0.048065 0.000000
+                 mass 0.106131 momentsOfInertia [0.000120 0 0 0 0.000120 0 0 0 0.000120]
+                children [
+                Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 0.048065 0.000000
+                children Shape { geometry Cylinder { radius 0.025000 height 0.096131 }}}
+                ]
+                }
+                ]
+            }]
+        }]
+    }]
+}]
+}

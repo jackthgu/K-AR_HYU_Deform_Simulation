@@ -1,0 +1,296 @@
+# AST/ASF file generated using VICON BodyLanguage
+# -----------------------------------------------
+:version 1.10
+:name VICON
+:units
+  mass 1
+  length 1.0
+  angle deg
+:documentation
+   .ast/.asf automatically generated from VICON data using
+   VICON BodyBuilder and BodyLanguage model BRILLIANT.MOD
+:root
+   order TX TY TZ RZ RY RX
+   axis XYZ
+   position 0 0 0  
+   orientation 0 0 0 
+:bonedata
+  begin
+     id 1 
+     name lhipjoint
+     direction 0.764552 -0.644238 -0.0204331 
+     length 5.90871 
+     axis 0 0 0  XYZ
+  end
+  begin
+     id 2 
+     name lfemur
+     direction 0.173648 -0.984808 0  
+     length 15.3337  
+     axis 0 0 10  XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 3 
+     name ltibia
+     direction 0.173648 -0.984808 0   
+     length 16.1104   
+     axis 0 0 10   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 4 
+     name lfoot
+     direction -0.0873058 0.0801444 0.992952   
+     length 6.78654   
+     axis -90 -1.73656e-015 10   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 5 
+     name ltoes
+     direction -0.0169918 0.0949955 0.995333   
+     length 0.635035   
+     axis -90 -1.73656e-015 10   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 6 
+     name rhipjoint
+     direction -0.758038 -0.651882 -0.0206756   
+     length 5.83942  
+     axis 0 0 0  XYZ 
+  end
+  begin
+     id 7 
+     name rfemur
+     direction -0.173648 -0.984808 0   
+     length 15.2628   
+     axis 0 0 -10   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 8 
+     name rtibia
+     direction -0.173648 -0.984808 0   
+     length 16.3497   
+     axis 0 0 -10   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+ end
+ begin
+     id 9 
+     name rfoot
+     direction 0.120097 0.0607792 0.9909   
+     length 6.89614  
+     axis -90 1.73656e-015 -10   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 10 
+     name rtoes
+     direction -0.00133915 -0.00749564 0.999971   
+     length 0.979476   
+     axis -90 1.73656e-015 -10   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 11 
+     name lowerback
+     direction 0.0189424 0.986103 0.165055   
+     length 6.11404   
+     axis 0 0 0   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 12 
+     name upperback
+     direction 0.000965406 0.990314 0.138845   
+     length 5.97196   
+     axis 0 0 0   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 13 
+     name thorax
+     direction -0.00787268 0.999949 -0.00639988   
+     length 6.32724   
+     axis 0 0 0   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 14 
+     name lowerneck
+     direction 0.012608 0.935243 -0.353781   
+     length 3.54127   
+     axis 0 0 0   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 15 
+     name upperneck
+     direction -0.0268245 0.996534 0.0787455   
+     length 3.73148   
+     axis 0 0 0   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 16
+     name head
+     direction -0.0124986 0.998063 0.060935  
+     length 3.73387  
+     axis 0 0 0   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 17 
+     name lshoulderjoint
+     direction 0.984808 0.173648 0  
+     length 5.82417  
+     axis 0 0 10   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 18 
+     name lhumerus
+     direction 0.173648 -0.984808 -1.05083e-027   
+     length 12.001   
+     axis 180 5.14477e-009 -170   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 19
+     name lradius
+     direction 0.173648 -0.984808 6.10688e-027   
+     length 8.35344   
+     axis 180 5.14477e-009 -170   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 20
+     name lhand
+     direction 0.172065 -0.975828 -0.134737   
+     length 3.65052   
+     axis 180 5.14477e-009 -170   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 21
+     name rshoulderjoint
+     direction -0.984808 0.173648 0   
+     length 5.67691  
+     axis 0 0 -10   XYZ 
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 22
+     name rhumerus
+     direction -0.173648 -0.984808 -2.08473e-027  
+     length 12.5795   
+     axis -180 5.14477e-009 170   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 23
+     name rradius
+     direction -0.173648 -0.984808 -4.5781e-027   
+     length 9.22913   
+     axis -180 5.14477e-009 170   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+  begin
+     id 24
+     name rhand
+     direction -0.17096 -0.96956 -0.175288   
+     length 2.806   
+     axis -180 5.14477e-009 170   XYZ
+    dof rx ry rz
+    limits (-180 180)
+           (-180 180)
+           (-180 180)
+  end
+:hierarchy
+  begin
+    root lhipjoint rhipjoint lowerback
+    lhipjoint lfemur
+    lfemur ltibia
+    ltibia lfoot
+    lfoot ltoes
+    rhipjoint rfemur
+    rfemur rtibia
+    rtibia rfoot
+    rfoot rtoes
+    lowerback upperback
+    upperback thorax
+    thorax lshoulderjoint rshoulderjoint lowerneck
+    lowerneck upperneck
+    upperneck head
+    lshoulderjoint lhumerus
+    lhumerus lradius
+    lradius lhand
+    rshoulderjoint rhumerus
+    rhumerus rradius
+    rradius rhand
+  end

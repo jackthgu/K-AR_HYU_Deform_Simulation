@@ -1,0 +1,44 @@
+#순서는 상관없지만 빠트리거나 대소문자 틀리면 책임 못짐.
+HIPS            root
+LEFTHIP         lfemur        
+LEFTKNEE        ltibia
+LEFTANKLE       lfoot
+RIGHTHIP        rfemur    
+RIGHTKNEE       rtibia    
+RIGHTANKLE      rfoot     
+CHEST		lowerback
+CHEST2		upperback
+LEFTCOLLAR	lshoulderjoint
+LEFTSHOULDER    lhumerus
+LEFTELBOW       lradius
+LEFTWRIST       lhand
+RIGHTCOLLAR	rshoulderjoint
+RIGHTSHOULDER   rhumerus
+RIGHTELBOW      rradius 
+RIGHTWRIST      rhand   
+NECK            upperneck           
+HEAD            head           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

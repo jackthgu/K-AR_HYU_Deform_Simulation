@@ -1,0 +1,17 @@
+#필요한 voca만 지정할 것. 순서도 상관없음
+HIPS            marker_3
+LEFTSHOULDER    marker_2_12
+LEFTELBOW       marker_12_13      
+LEFTWRIST       child_marker_12_13
+RIGHTSHOULDER   marker_2_9    
+RIGHTELBOW      marker_9_10
+RIGHTWRIST      child_marker_9_10
+RIGHTHIP        marker_4_15
+RIGHTKNEE	marker_15_16     
+RIGHTANKLE      marker_16_17
+LEFTHIP         marker_4_19
+LEFTKNEE        marker_19_20   
+LEFTANKLE       marker_20_21     
+NECK            marker_3_2
+HEAD            marker_2_1
+CHEST		marker_6_7

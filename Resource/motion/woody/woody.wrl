@@ -1,0 +1,325 @@
+DEF SampleRobot Humanoid { 
+ name "woody.wrl"
+ humanoidBody [
+
+  DEF Hips Joint 
+  {
+    jointType "free"
+    jointAxis "Z"
+    translation 1.550480 0.981286 0.039345
+    children [
+      Segment 
+      {
+        centerOfMass 0.000000 -0.009073 0.000339
+        mass 0.378028
+        momentsOfInertia [0.000600 0.000000 0.000000 0.000000 0.000600 0.000000 0.000000 0.000000 0.000600]
+        children [ Transform { rotation -0.898998 0.334261 0.282969 1.765320 translation -0.408764 -0.945409 0.073961 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/Hips.obj"}}]
+      }
+      DEF RightUpLeg Joint 
+      {
+        jointType "rotate"
+        jointAxis "ZXY"
+        translation -0.089458 -0.086671 0.001017
+        children [
+          Segment 
+          {
+            centerOfMass 0.000000 -0.222113 0.006863
+            mass 0.454439
+            momentsOfInertia [0.009385 0.000000 0.000000 0.000000 0.009385 0.000000 0.000000 0.000000 0.009385]
+            children [ Transform { rotation -0.934779 -0.114285 0.336343 1.281098 translation 0.038909 -0.785099 -0.476248 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/RightUpLeg.obj"}}]
+          }
+          DEF RightLeg Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 -0.444227 0.013727
+            children [
+              Segment 
+              {
+                centerOfMass 0.001268 -0.210462 -0.007303
+                mass 0.431185
+                momentsOfInertia [0.008017 0.000000 0.000000 0.000000 0.008017 0.000000 0.000000 0.000000 0.008017]
+                children [ Transform { rotation -0.961346 -0.020652 0.274567 1.760921 translation 0.038909 -0.535363 -0.263924 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/RightLeg.obj"}}]
+              }
+              DEF RightFoot Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation 0.002535 -0.420924 -0.014606
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.000200 -0.022075 0.042495
+                    mass 0.105775
+                    momentsOfInertia [0.000118 0.000000 0.000000 0.000000 0.000118 0.000000 0.000000 0.000000 0.000118]
+                    children [ Transform { rotation -0.992556 0.101593 0.067171 1.385452 translation 0.030525 -0.045928 -0.271178 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/RightFoot.obj"}}]
+                  }
+                  DEF RightToes Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                    translation 0.000400 -0.044151 0.084991
+                    children [
+                      Segment 
+                      {
+                        centerOfMass -0.000400 -0.000687 0.048899
+                        mass 0.107811
+                        momentsOfInertia [0.000125 0.000000 0.000000 0.000000 0.000125 0.000000 0.000000 0.000000 0.000125]
+                        children [ Transform { rotation -0.992075 0.112976 0.054988 1.384990 translation 0.029614 -0.002662 -0.356206 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/RightToes.obj"}}]
+                      }
+                    ]
+                  } # RightToes
+                  
+                ]
+              } # RightFoot
+              
+            ]
+          } # RightLeg
+          
+        ]
+      } # RightUpLeg
+      
+      DEF Spine Joint 
+      {
+        jointType "rotate"
+        jointAxis "ZXY"
+        translation 0.000000 0.118905 0.000000
+        children [
+          Segment 
+          {
+            centerOfMass 0.000000 0.128287 0.000638
+            mass 0.266577
+            momentsOfInertia [0.001894 0.000000 0.000000 0.000000 0.001894 0.000000 0.000000 0.000000 0.001894]
+            children [ Transform { rotation -0.878334 0.407605 0.249777 1.746196 translation -0.534291 -1.005710 0.091665 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/Spine.obj"}}]
+          }
+          DEF Spine1 Joint 
+          {
+            jointType "rotate"
+            jointAxis "ZXY"
+            translation 0.000000 0.256574 0.001277
+            children [
+              Segment 
+              {
+                centerOfMass 0.000000 0.013349 -0.000714
+                mass 0.277341
+                momentsOfInertia [0.000237 0.000000 0.000000 0.000000 0.000237 0.000000 0.000000 0.000000 0.000237]
+                children [ Transform { rotation -0.906400 0.356819 0.226095 1.912832 translation -0.427691 -1.270638 0.299259 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/Spine1.obj"}}]
+              }
+              DEF Head Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation 0.000000 0.087342 0.000113
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.001450 0.063871 0.012570
+                    mass 0.140225
+                    momentsOfInertia [0.000276 0.000000 0.000000 0.000000 0.000276 0.000000 0.000000 0.000000 0.000276]
+                    children [ Transform { rotation -0.945154 0.207604 0.252160 1.838946 translation -0.175601 -1.438127 0.132183 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/Head.obj"}}]
+                  }
+                ]
+              } # Head
+              
+              DEF LeftShoulder1 Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation 0.089900 -0.003623 -0.002200
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.051413 -0.000017 0.001611
+                    mass 0.112877
+                    momentsOfInertia [0.000144 0.000000 0.000000 0.000000 0.000144 0.000000 0.000000 0.000000 0.000144]
+                    children [ Transform { rotation -0.388216 -0.468986 0.793309 1.198405 translation 0.505724 -0.262974 -1.280310 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/LeftShoulder1.obj"}}]
+                  }
+                  DEF LeftArm Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "Y"
+                    translation 0.102827 -0.000034 0.003221
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.131299 0.000496 -0.007122
+                        mass 0.272985
+                        momentsOfInertia [0.002034 0.000000 0.000000 0.000000 0.002034 0.000000 0.000000 0.000000 0.002034]
+                        children [ Transform { rotation -0.470369 -0.663828 0.581451 1.457746 translation 0.921229 -0.262940 -0.980364 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/LeftArm.obj"}}]
+                      }
+                      DEF LeftForeArm Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "ZXY"
+                        translation 0.262597 0.000991 -0.014243
+                        children [
+                          Segment 
+                          {
+                            centerOfMass 0.110451 0.000427 0.005111
+                            mass 0.231140
+                            momentsOfInertia [0.001235 0.000000 0.000000 0.000000 0.001235 0.000000 0.000000 0.000000 0.001235]
+                            children [ Transform { rotation -0.518662 0.075827 0.851610 2.534519 translation 0.670172 -0.966172 -0.232868 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/LeftForeArm.obj"}}]
+                          }
+                          DEF LeftHand Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "ZXY"
+                            translation 0.220902 0.000854 0.010222
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.067095 -0.003000 0.007515
+                                mass 0.145162
+                                momentsOfInertia [0.000306 0.000000 0.000000 0.000000 0.000306 0.000000 0.000000 0.000000 0.000306]
+                                children [ Transform { rotation -0.565434 0.195865 0.801200 2.129923 translation -0.020366 -1.068319 -0.233142 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/LeftHand.obj"}}]
+                              }
+                            ]
+                          } # LeftHand
+                          
+                        ]
+                      } # LeftForeArm
+                      
+                    ]
+                  } # LeftArm
+                  
+                ]
+              } # LeftShoulder1
+              
+              DEF RightShoulder Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation -0.089900 -0.003623 -0.002200
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.051413 -0.000017 0.001611
+                    mass 0.112877
+                    momentsOfInertia [0.000144 0.000000 0.000000 0.000000 0.000144 0.000000 0.000000 0.000000 0.000144]
+                    children [ Transform { rotation -0.323027 0.938924 0.118641 1.174706 translation -1.245941 -0.283404 -0.421451 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/RightShoulder.obj"}}]
+                  }
+                  DEF RightArm Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "Y"
+                    translation -0.102827 -0.000034 0.003221
+                    children [
+                      Segment 
+                      {
+                        centerOfMass -0.131820 0.000496 -0.007122
+                        mass 0.274026
+                        momentsOfInertia [0.002058 0.000000 0.000000 0.000000 0.002058 0.000000 0.000000 0.000000 0.002058]
+                        children [ Transform { rotation -0.208465 0.966739 0.148181 1.682901 translation -1.200562 -0.283370 0.213793 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/RightArm.obj"}}]
+                      }
+                      DEF RightForeArm Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "ZXY"
+                        translation -0.263640 0.000991 -0.014243
+                        children [
+                          Segment 
+                          {
+                            centerOfMass -0.110162 0.000427 0.005111
+                            mass 0.230563
+                            momentsOfInertia [0.001226 0.000000 0.000000 0.000000 0.001226 0.000000 0.000000 0.000000 0.001226]
+                            children [ Transform { rotation -0.273213 0.928718 -0.250673 1.309975 translation -0.982217 0.037995 -0.210927 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/RightForeArm.obj"}}]
+                          }
+                          DEF RightHand Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "ZXY"
+                            translation -0.220324 0.000854 0.010222
+                            children [
+                              Segment 
+                              {
+                                centerOfMass -0.066642 -0.003000 0.007515
+                                mass 0.144263
+                                momentsOfInertia [0.000300 0.000000 0.000000 0.000000 0.000300 0.000000 0.000000 0.000000 0.000300]
+                                children [ Transform { rotation -0.484193 0.860856 -0.156473 1.273393 translation -0.733166 -0.186555 -0.241727 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/RightHand.obj"}}]
+                              }
+                            ]
+                          } # RightHand
+                          
+                        ]
+                      } # RightForeArm
+                      
+                    ]
+                  } # RightArm
+                  
+                ]
+              } # RightShoulder
+              
+            ]
+          } # Spine1
+          
+        ]
+      } # Spine
+      
+      DEF LeftUpLeg Joint 
+      {
+        jointType "rotate"
+        jointAxis "ZXY"
+        translation 0.089458 -0.086671 0.001017
+        children [
+          Segment 
+          {
+            centerOfMass 0.000000 -0.222113 0.006863
+            mass 0.454439
+            momentsOfInertia [0.009385 0.000000 0.000000 0.000000 0.009385 0.000000 0.000000 0.000000 0.009385]
+            children [ Transform { rotation -0.700282 0.526293 0.482307 1.893491 translation -0.460535 -0.847308 0.246888 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/LeftUpLeg.obj"}}]
+          }
+          DEF LeftLeg Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 -0.444227 0.013727
+            children [
+              Segment 
+              {
+                centerOfMass -0.001268 -0.210462 -0.007303
+                mass 0.431185
+                momentsOfInertia [0.008017 0.000000 0.000000 0.000000 0.008017 0.000000 0.000000 0.000000 0.008017]
+                children [ Transform { rotation -0.782429 0.571281 0.247877 2.390292 translation -0.460535 -0.173375 0.432179 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/LeftLeg.obj"}}]
+              }
+              DEF LeftFoot Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation -0.002535 -0.420924 -0.014606
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.000200 -0.022075 0.042495
+                    mass 0.105775
+                    momentsOfInertia [0.000118 0.000000 0.000000 0.000000 0.000118 0.000000 0.000000 0.000000 0.000118]
+                    children [ Transform { rotation -0.706036 0.531811 0.467643 2.204529 translation -0.370049 -0.006205 0.577656 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/LeftFoot.obj"}}]
+                  }
+                  DEF LeftToes Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                    translation -0.000400 -0.044151 0.084991
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.000400 -0.000237 0.048899
+                        mass 0.107802
+                        momentsOfInertia [0.000125 0.000000 0.000000 0.000000 0.000125 0.000000 0.000000 0.000000 0.000125]
+                        children [ Transform { rotation -0.712423 0.522580 0.468363 2.207220 translation -0.375148 0.031164 0.488970 children Shape {geometry OBJ "/home/taesoo/taesooLib/Resource/motion/woody/woody_sd/LeftToes.obj"}}]
+                      }
+                    ]
+                  } # LeftToes
+                  
+                ]
+              } # LeftFoot
+              
+            ]
+          } # LeftLeg
+          
+        ]
+      } # LeftUpLeg
+      
+    ]
+  } # Hips
+   ]
+}

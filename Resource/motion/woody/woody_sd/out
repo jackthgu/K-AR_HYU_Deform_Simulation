@@ -1,0 +1,21 @@
+
+
+
+mv lclavicle.obj LeftShoulder1.obj
+mv lfemur_cart.obj LeftUpLeg.obj
+mv lfoot.obj LeftFoot.obj
+mv ltoes.obj LeftToes.obj
+mv lhumerus.obj LeftArm.obj
+mv lowerback.obj Spine.obj
+mv upperback.obj Spine1.obj
+mv LowerNeck.obj Head.obj
+mv lradius.obj LeftForeArm.obj
+mv ltibia_cart.obj LeftLeg.obj
+mv rclavicle.obj RightShoulder1.obj
+mv rfoot.obj RightFoot.obj
+mv rtoes.obj RightToes.obj
+mv rhumerus.obj RightArm.obj
+mv rradius.obj RightForeArm.obj
+mv rtibia_cart.obj RightLeg.obj
+mv lhand.obj LeftHand.obj
+mv rhand.obj RightHand.obj

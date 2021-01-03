@@ -1,0 +1,231 @@
+DEF SampleRobot Humanoid { 
+ name "left_leg"
+ humanoidBody [
+
+  DEF WAIST Joint 
+  {
+    jointType "free"
+    jointAxis "Z"
+    translation 0.000000 0.713500 0.000000
+    children [
+      Segment 
+      {
+        centerOfMass 0.000000 0.037500 0.000000
+        mass 27.000000
+        momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+        material "lightgrey"
+        children [
+        Shape {geometry Box { size 0.080000 0.080000 0.080000 }}
+        Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 0.095500 0.000000  children Shape {geometry Box { size 0.050000 0.111000 0.050000 }}}
+        Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 0.195500 0.000000  children Shape {geometry Ellipsoid { size 0.250000 0.111000 0.150000 }}}
+        ]
+      
+      }
+      DEF LLEG_HIP_R Joint 
+      {
+        jointType "rotate"
+        jointAxis "Z"
+        translation -0.090000 0.000000 0.000000
+        children [
+          Segment 
+          {
+            centerOfMass 0.000000 0.100000 0.000000
+            mass 2.500000
+            momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+            material "lightgrey"
+#            children   Transform { rotation 1.000000 0.000000 0.000000 1.570800 translation 0.000000 0.000000 0.000000  children Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}}
+          
+          
+          }
+          DEF LLEG_HIP_P Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 0.000000 0.000000
+            children [
+              Segment 
+              {
+                centerOfMass 0.000000 -0.125000 0.000000
+                mass 7.000000
+                momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+                material "green"
+                children [
+#                Transform { rotation 0.000000 0.000000 1.000000 1.570800 translation 0.000000 0.000000 0.000000  children Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}}
+#                Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.126750 0.000000  children Shape {geometry Box { size 0.100000 0.153500 0.100000 }}}
+                Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.153500 0.000000  children Shape {geometry Capsule { radius 0.050000 height 0.300000 }}}
+                ]
+              
+              }
+              DEF LLEG_KNEE Joint 
+              {
+                jointType "rotate"
+                jointAxis "X"
+                translation 0.000000 -0.353500 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.000000 -0.150000 0.000000
+                    mass 5.100000
+                    momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+                    material "red"
+                    children [
+#                    Transform { rotation 0.000000 0.000000 1.000000 1.570800 translation 0.000000 0.000000 0.000000  children Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}}
+                    Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.150000 0.000000  children Shape {geometry Capsule { radius 0.050000 height 0.200000  }}}
+                    ]
+                  
+                  }
+                  DEF LLEG_ANKLE_P Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "Z"
+                    translation 0.000000 -0.300000 0.000000
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.000000 0.000000 -0.150000
+                        mass 2.500000
+                        momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+                        material "blue"
+#                        children   Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}
+                      
+                      
+                      }
+                      DEF LLEG_ANKLE_R Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "X"
+                        translation 0.000000 0.000000 0.000000
+                        children [
+                          Segment 
+                          {
+                            centerOfMass 0.000000 -0.200000 0.280000
+                            mass 1.900000
+                            momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+                            material "lightgrey"
+                            children [
+                            Transform { rotation 1.000000 0.000000 0.000000 1.570800 translation 0.000000 0.000000 0.100000  children Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}}
+                            Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.050000 0.055000  children Shape {geometry Box { size 0.140000 0.010000 0.250000 }}}
+                            ]
+                          
+                          }
+                        ]
+                      } # LLEG_ANKLE_R
+                      
+                    ]
+                  } # LLEG_ANKLE_P
+                  
+                ]
+              } # LLEG_KNEE
+              
+            ]
+          } # LLEG_HIP_P
+          
+        ]
+      } # LLEG_HIP_R
+      
+      DEF RLEG_HIP_R Joint 
+      {
+        jointType "rotate"
+        jointAxis "Z"
+        translation 0.090000 0.000000 0.000000
+        children [
+          Segment 
+          {
+            centerOfMass 0.000000 0.100000 0.000000
+            mass 2.500000
+            momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+            material "lightgrey"
+            children   Transform { rotation 1.000000 0.000000 0.000000 1.570800 translation 0.000000 0.000000 0.000000  children Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}}
+          
+          
+          }
+          DEF RLEG_HIP_P Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 0.000000 0.000000
+            children [
+              Segment 
+              {
+                centerOfMass 0.000000 -0.125000 0.000000
+                mass 7.000000
+                momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+                material "green"
+                children [
+                Transform { rotation 0.000000 0.000000 1.000000 1.570800 translation 0.000000 0.000000 0.000000  children Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}}
+                Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.126750 0.000000  children Shape {geometry Box { size 0.100000 0.153500 0.100000 }}}
+                Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.253500 0.000000  children Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}}
+                ]
+              
+              }
+              DEF RLEG_KNEE Joint 
+              {
+                jointType "rotate"
+                jointAxis "X"
+                translation 0.000000 -0.353500 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.000000 -0.150000 0.000000
+                    mass 5.100000
+                    momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+                    material "red"
+                    children [
+                    Transform { rotation 0.000000 0.000000 1.000000 1.570800 translation 0.000000 0.000000 0.000000  children Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}}
+                    Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.150000 0.000000  children Shape {geometry Box { size 0.100000 0.200000 0.100000 }}}
+                    ]
+                  
+                  }
+                  DEF RLEG_ANKLE_P Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "Z"
+                    translation 0.000000 -0.300000 0.000000
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.000000 0.000000 -0.150000
+                        mass 2.500000
+                        momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+                        material "blue"
+                        children   Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}
+                      
+                      
+                      }
+                      DEF RLEG_ANKLE_R Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "X"
+                        translation 0.000000 0.000000 0.000000
+                        children [
+                          Segment 
+                          {
+                            centerOfMass 0.000000 -0.200000 0.280000
+                            mass 1.900000
+                            momentsOfInertia [1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000]
+                            material "lightgrey"
+                            children [
+                            Transform { rotation 1.000000 0.000000 0.000000 1.570800 translation 0.000000 0.000000 0.100000  children Shape {geometry Cylinder { radius 0.050000 height 0.100000 }}}
+                            Transform { rotation 0.000000 0.000000 0.000000 0.000000 translation 0.000000 -0.050000 0.055000  children Shape {geometry Box { size 0.140000 0.010000 0.250000 }}}
+                            ]
+                          
+                          }
+                        ]
+                      } # RLEG_ANKLE_R
+                      
+                    ]
+                  } # RLEG_ANKLE_P
+                  
+                ]
+              } # RLEG_KNEE
+              
+            ]
+          } # RLEG_HIP_P
+          
+        ]
+      } # RLEG_HIP_R
+      
+    ]
+  } # WAIST
+   ]
+}

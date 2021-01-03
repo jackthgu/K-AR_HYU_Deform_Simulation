@@ -1,0 +1,37 @@
+<Muscles>
+	<unit name="R_Platysma_0">
+		<mesh type="Rectangle" nx="1" ny="1" ratio="0.2" />
+		<origin>
+			<anchor body="Torso" x="-2.32938790321" y="55.569625854" z="8.42460727692"/>
+			<anchor body="Torso" x="-1.77694094181" y="54.914871216" z="5.00800514221"/>
+		</origin>
+		<insertion>
+			<anchor body="NeckR" x="-6.54869413376" y="44.941421509" z="3.82584095001"/>
+		</insertion>
+	</unit>
+ <!--
+	<unit name="R_Platysma_1">
+		<mesh type="Rectangle" nx="1" ny="1" ratio="0.2" />
+		<origin>
+			<anchor body="Torso" x="-4.94996500015" y="57.427307129" z="4.06878709793"/>
+			<anchor body="Torso" x="-4.58278512955" y="56.317871094" z="1.61618494987"/>
+		</origin>
+		<insertion>
+			<anchor body="NeckR" x="-13.2948055267" y="45.438644409" z="0.321794003248"/>
+		</insertion>
+	</unit>
+
+	<unit name="R_Sternocleidomastoid">
+		<mesh type="Rectangle" nx="1" ny="1" ratio="0.2" />
+		<origin>
+			<anchor body="Torso" x="-6.79820823669" y="63.694046021" z="-2.80052709579"/>
+			<anchor body="Torso" x="-6.45964384079" y="60.585998535" z="-1.74660599232"/>
+		</origin>
+		<insertion>
+			<anchor body="NeckR" x="-2.15920495987" y="46.156219482" z="1.77132201195"/>
+		</insertion>
+	</unit>
+
+-->
+</Muscles>
+

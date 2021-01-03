@@ -1,0 +1,144 @@
+SD/FAST Information File: gymnist.sd
+Generated 23-Jul-2009 11:00:00 by SD/FAST, Order(N) formulation
+(sdfast B.2.8 #30123) on machine ID unknown
+
+ROADMAP (gymnist.sd)
+
+Bodies          Inb
+No  Name        body Joint type  Coords q
+--- ----------- ---- ----------- ----------------
+ -1 $ground                                      
+  0 pelvis       -1  Sixdof        0   1   2 
+                     ...           3   4   5  54 
+  1 lfemur_0      0  Pin           6             
+  2 lfemur_1      1  Pin           7             
+  3 lfemur        2  Pin           8             
+  4 ltibia        3  Pin           9             
+  5 lfoot_0       4  Pin          10             
+  6 lfoot_1       5  Pin          11             
+  7 lfoot         6  Pin          12             
+  8 ltoes         7  Pin          13             
+  9 rfemur_0      0  Pin          14             
+ 10 rfemur_1      9  Pin          15             
+ 11 rfemur       10  Pin          16             
+ 12 rtibia       11  Pin          17             
+ 13 rfoot_0      12  Pin          18             
+ 14 rfoot_1      13  Pin          19             
+ 15 rfoot        14  Pin          20             
+ 16 rtoes        15  Pin          21             
+ 17 lowerback_0   0  Pin          22             
+ 18 lowerback_1  17  Pin          23             
+ 19 lowerback    18  Pin          24             
+ 20 upperback_0  19  Pin          25             
+ 21 upperback_1  20  Pin          26             
+ 22 upperback    21  Pin          27             
+ 23 lclavicle_0  22  Pin          28             
+ 24 lclavicle_1  23  Pin          29             
+ 25 lclavicle    24  Pin          30             
+ 26 lhumerus_0   25  Pin          31             
+ 27 lhumerus_1   26  Pin          32             
+ 28 lhumerus     27  Pin          33             
+ 29 lradius      28  Pin          34             
+ 30 lhand_0      29  Pin          35             
+ 31 lhand_1      30  Pin          36             
+ 32 lhand        31  Pin          37             
+ 33 rclavicle_0  22  Pin          38             
+ 34 rclavicle_1  33  Pin          39             
+ 35 rclavicle    34  Pin          40             
+ 36 rhumerus_0   35  Pin          41             
+ 37 rhumerus_1   36  Pin          42             
+ 38 rhumerus     37  Pin          43             
+ 39 rradius      38  Pin          44             
+ 40 rhand_0      39  Pin          45             
+ 41 rhand_1      40  Pin          46             
+ 42 rhand        41  Pin          47             
+ 43 LowerNeck_0  22  Pin          48             
+ 44 LowerNeck_1  43  Pin          49             
+ 45 LowerNeck    44  Pin          50             
+ 46 Neck_0       45  Pin          51             
+ 47 Neck_1       46  Pin          52             
+ 48 Neck         47  Pin          53             
+
+
+STATE INDEX TO JOINT/AXIS MAP (gymnist.sd)
+
+ Index
+  q|u   Joint  Axis   Joint type    Axis type    Joint Name
+ -----  -----  ----   -----------   ----------   ----------
+  0|55      0     0   Sixdof        translate    
+  1|56      .     1   .             translate 
+  2|57      .     2   .             translate 
+  3|58      .     3   .             quaternion
+  4|59      .     4   .             quaternion
+  5|60      .     5   .             quaternion
+  6|61      1     0   Pin           rotate       
+  7|62      2     0   Pin           rotate       
+  8|63      3     0   Pin           rotate       
+  9|64      4     0   Pin           rotate       
+ 10|65      5     0   Pin           rotate       
+ 11|66      6     0   Pin           rotate       
+ 12|67      7     0   Pin           rotate       
+ 13|68      8     0   Pin           rotate       
+ 14|69      9     0   Pin           rotate       
+ 15|70     10     0   Pin           rotate       
+ 16|71     11     0   Pin           rotate       
+ 17|72     12     0   Pin           rotate       
+ 18|73     13     0   Pin           rotate       
+ 19|74     14     0   Pin           rotate       
+ 20|75     15     0   Pin           rotate       
+ 21|76     16     0   Pin           rotate       
+ 22|77     17     0   Pin           rotate       
+ 23|78     18     0   Pin           rotate       
+ 24|79     19     0   Pin           rotate       
+ 25|80     20     0   Pin           rotate       
+ 26|81     21     0   Pin           rotate       
+ 27|82     22     0   Pin           rotate       
+ 28|83     23     0   Pin           rotate       
+ 29|84     24     0   Pin           rotate       
+ 30|85     25     0   Pin           rotate       
+ 31|86     26     0   Pin           rotate       
+ 32|87     27     0   Pin           rotate       
+ 33|88     28     0   Pin           rotate       
+ 34|89     29     0   Pin           rotate       
+ 35|90     30     0   Pin           rotate       
+ 36|91     31     0   Pin           rotate       
+ 37|92     32     0   Pin           rotate       
+ 38|93     33     0   Pin           rotate       
+ 39|94     34     0   Pin           rotate       
+ 40|95     35     0   Pin           rotate       
+ 41|96     36     0   Pin           rotate       
+ 42|97     37     0   Pin           rotate       
+ 43|98     38     0   Pin           rotate       
+ 44|99     39     0   Pin           rotate       
+ 45|100    40     0   Pin           rotate       
+ 46|101    41     0   Pin           rotate       
+ 47|102    42     0   Pin           rotate       
+ 48|103    43     0   Pin           rotate       
+ 49|104    44     0   Pin           rotate       
+ 50|105    45     0   Pin           rotate       
+ 51|106    46     0   Pin           rotate       
+ 52|107    47     0   Pin           rotate       
+ 53|108    48     0   Pin           rotate       
+ 54|        0     6   Sixdof        4th quat  
+   
+
+SYSTEM PARAMETERS (gymnist.sd)
+
+Parameter  Value  Description
+
+nbod          49  no. bodies (also, no. of tree joints)
+njnt          49  total number of joints (tree+loop)
+ndof          54  no. degrees of freedom allowed by tree joints
+nloop          0  no. loop joints
+nldof          0  no. degrees of freedom allowed by loop joints
+
+nq            55  no. position coordinates in state (tree joints)
+nu            54  no. rate coordinates in state (tree joints)
+nlq            0  no. position coordinates describing loop joints
+nlu            0  no. rate coordinates describing loop joints
+
+nc             0  total no. constraints defined
+nlc            0  no. loop joint constraints
+npresc         0  no. prescribed motion constraints
+nuserc         0  no. user constraints
+

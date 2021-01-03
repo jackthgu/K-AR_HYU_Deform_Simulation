@@ -1,0 +1,325 @@
+DEF SampleRobot Humanoid { 
+ name "woody.wrl"
+ humanoidBody [
+
+  DEF Hips Joint 
+  {
+    jointType "free"
+    jointAxis "Z"
+    translation 1.550480 0.981286 0.039345
+    children [
+      Segment 
+      {
+        centerOfMass -0.000244 -0.060314 0.003814
+        mass 9.904900
+        momentsOfInertia [0.066729 -0.000549 -0.000261 -0.000549 0.093324 0.000371 -0.000261 0.000371 0.082312]
+        children [ Transform { rotation -0.536803 0.582018 0.610817 2.103645 translation 0.079059 -1.095282 1.633178 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/Hips.obj"}}]
+      }
+      DEF RightUpLeg Joint 
+      {
+        jointType "rotate"
+        jointAxis "ZXY"
+        translation -0.089458 -0.086671 0.001017
+        children [
+          Segment 
+          {
+            centerOfMass 0.002881 -0.211344 0.001913
+            mass 9.165917
+            momentsOfInertia [0.140385 0.006174 0.000289 0.006174 0.039390 0.003501 0.000289 0.003501 0.133981]
+            children [ Transform { rotation -0.516835 0.580859 0.628876 2.196378 translation 0.365011 -0.969681 1.623617 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/RightUpLeg.obj"}}]
+          }
+          DEF RightLeg Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 -0.444227 0.013727
+            children [
+              Segment 
+              {
+                centerOfMass 0.008425 -0.188373 -0.021467
+                mass 3.540150
+                momentsOfInertia [0.043949 -0.001040 -0.000074 -0.001040 0.005948 0.002057 -0.000074 0.002057 0.043570]
+                children [ Transform { rotation -0.544951 0.616749 0.568022 2.282201 translation 0.365011 -0.259664 1.673446 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/RightLeg.obj"}}]
+              }
+              DEF RightFoot Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation 0.002535 -0.420924 -0.014606
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.000749 -0.029563 0.048132
+                    mass 0.819337
+                    momentsOfInertia [0.001866 -0.000011 0.000086 -0.000011 0.001803 0.000112 0.000086 0.000112 0.000836]
+                    children [ Transform { rotation -0.437670 0.632118 0.639431 2.350498 translation 0.728509 -0.027736 1.573346 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/RightFoot.obj"}}]
+                  }
+                  DEF RightToes Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                    translation 0.000400 -0.044151 0.084991
+                    children [
+                      Segment 
+                      {
+                        centerOfMass -0.007235 -0.000087 0.070481
+                        mass 0.233023
+                        momentsOfInertia [0.000136 0.000002 0.000000 0.000002 0.000204 0.000001 0.000000 0.000001 0.000154]
+                        children [ Transform { rotation -0.422847 0.647101 0.634397 2.324685 translation 0.737878 -0.018318 1.483514 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/RightToes.obj"}}]
+                      }
+                    ]
+                  } # RightToes
+                  
+                ]
+              } # RightFoot
+              
+            ]
+          } # RightLeg
+          
+        ]
+      } # RightUpLeg
+      
+      DEF Spine Joint 
+      {
+        jointType "rotate"
+        jointAxis "ZXY"
+        translation 0.000000 0.148905 0.000000
+        children [
+          Segment 
+          {
+            centerOfMass -0.008618 -0.031984 0.006860
+            mass 8.962205
+            momentsOfInertia [0.054493 -0.000336 0.000721 -0.000336 0.078791 0.005070 0.000721 0.005070 0.076322]
+            children [ Transform { rotation -0.491160 0.544909 0.679585 1.999874 translation 0.062316 -1.525363 1.375103 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/Spine.obj"}}]
+          }
+          DEF Spine1 Joint 
+          {
+            jointType "rotate"
+            jointAxis "ZXY"
+            translation 0.000000 0.336574 0.001277
+            children [
+              Segment 
+              {
+                centerOfMass 0.004937 -0.129067 0.077826
+                mass 15.882253
+                momentsOfInertia [0.162556 0.001424 -0.001607 0.001424 0.162481 0.016029 -0.001607 0.016029 0.225421]
+                children [ Transform { rotation -0.567525 0.630802 0.529154 2.210206 translation 0.070955 -1.199424 1.978493 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/Spine1.obj"}}]
+              }
+              DEF Head Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation 0.000000 0.087342 0.000113
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.012020 0.085678 0.053559
+                    mass 4.486482
+                    momentsOfInertia [0.025116 -0.000490 -0.000134 -0.000490 0.016311 0.000609 -0.000134 0.000609 0.023174]
+                    children [ Transform { rotation -0.485187 0.635675 0.600426 2.186478 translation 0.238947 -1.567573 1.749403 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/Head.obj"}}]
+                  }
+                ]
+              } # Head
+              
+              DEF LeftShoulder1 Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation 0.119900 -0.003623 -0.002200
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.060991 -0.029946 0.029316
+                    mass 0.783831
+                    momentsOfInertia [0.000921 -0.000173 -0.000121 -0.000173 0.001378 0.000036 -0.000121 0.000036 0.001717]
+                    children [ Transform { rotation -0.425872 -0.149448 0.892356 2.187826 translation 1.488124 -1.755455 -0.243613 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/LeftShoulder1.obj"}}]
+                  }
+                  DEF LeftArm Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "Y"
+                    translation 0.102827 -0.000034 0.003221
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.116556 0.001123 0.003814
+                        mass 2.362335
+                        momentsOfInertia [0.003937 0.000208 0.001730 0.000208 0.015776 0.000243 0.001730 0.000243 0.015528]
+                        children [ Transform { rotation -0.636581 -0.277861 0.719415 2.308357 translation 1.305752 -1.755421 0.524393 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/LeftArm.obj"}}]
+                      }
+                      DEF LeftForeArm Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "ZXY"
+                        translation 0.262597 0.000991 -0.014243
+                        children [
+                          Segment 
+                          {
+                            centerOfMass 0.099311 0.008032 0.003400
+                            mass 1.094372
+                            momentsOfInertia [0.000984 0.000175 -0.000237 0.000175 0.004714 0.000002 -0.000237 0.000002 0.004674]
+                            children [ Transform { rotation -0.607153 0.003257 0.794578 3.262523 translation 1.582943 -0.018637 1.399009 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/LeftForeArm.obj"}}]
+                          }
+                          DEF LeftHand Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "ZXY"
+                            translation 0.220902 0.000854 0.010222
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.067880 -0.039495 0.009888
+                                mass 0.856263
+                                momentsOfInertia [0.001174 0.000360 0.000139 0.000360 0.001907 0.000239 0.000139 0.000239 0.001966]
+                                children [ Transform { rotation -0.596248 0.220418 0.771948 3.100697 translation 1.267682 -0.181922 1.464293 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/LeftHand.obj"}}]
+                              }
+                            ]
+                          } # LeftHand
+                          
+                        ]
+                      } # LeftForeArm
+                      
+                    ]
+                  } # LeftArm
+                  
+                ]
+              } # LeftShoulder1
+              
+              DEF RightShoulder Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation -0.119900 -0.003623 -0.002200
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.025790 -0.001782 0.036333
+                    mass 0.790180
+                    momentsOfInertia [0.001152 0.000314 0.000216 0.000314 0.001295 0.000019 0.000216 0.000019 0.001552]
+                    children [ Transform { rotation 0.144227 0.823742 0.548314 1.423789 translation -1.557764 -1.571654 0.701989 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/RightShoulder.obj"}}]
+                  }
+                  DEF RightArm Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "Y"
+                    translation -0.102827 -0.000034 0.003221
+                    children [
+                      Segment 
+                      {
+                        centerOfMass -0.118744 0.002292 0.010210
+                        mass 2.371896
+                        momentsOfInertia [0.004172 -0.001527 -0.001735 -0.001527 0.015990 -0.000142 -0.001735 -0.000142 0.015326]
+                        children [ Transform { rotation 0.196339 0.866658 0.458645 1.673262 translation -1.189433 -1.571620 1.091039 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/RightArm.obj"}}]
+                      }
+                      DEF RightForeArm Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "ZXY"
+                        translation -0.263640 0.000991 -0.014243
+                        children [
+                          Segment 
+                          {
+                            centerOfMass -0.096655 0.005835 0.006209
+                            mass 1.241580
+                            momentsOfInertia [0.001172 -0.000063 0.000096 -0.000063 0.006066 0.000011 0.000096 0.000011 0.005999]
+                            children [ Transform { rotation -0.090027 0.995688 0.022357 1.408167 translation -1.392123 -0.216676 1.602153 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/RightForeArm.obj"}}]
+                          }
+                          DEF RightHand Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "ZXY"
+                            translation -0.220324 0.000854 0.010222
+                            children [
+                              Segment 
+                              {
+                                centerOfMass -0.065284 -0.024643 0.013689
+                                mass 0.850338
+                                momentsOfInertia [0.001190 -0.000355 -0.000139 -0.000355 0.002108 0.000044 -0.000139 0.000044 0.001648]
+                                children [ Transform { rotation -0.287992 0.957277 -0.026090 1.416691 translation -1.218483 0.014752 1.571546 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/RightHand.obj"}}]
+                              }
+                            ]
+                          } # RightHand
+                          
+                        ]
+                      } # RightForeArm
+                      
+                    ]
+                  } # RightArm
+                  
+                ]
+              } # RightShoulder
+              
+            ]
+          } # Spine1
+          
+        ]
+      } # Spine
+      
+      DEF LeftUpLeg Joint 
+      {
+        jointType "rotate"
+        jointAxis "ZXY"
+        translation 0.089458 -0.086671 0.001017
+        children [
+          Segment 
+          {
+            centerOfMass 0.006689 -0.208797 0.007255
+            mass 9.065909
+            momentsOfInertia [0.139439 -0.006463 -0.000537 -0.006463 0.038202 -0.000638 -0.000537 -0.000638 0.133253]
+            children [ Transform { rotation -0.588309 0.566531 0.577006 2.004134 translation -0.277146 -0.996354 1.616114 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/LeftUpLeg.obj"}}]
+          }
+          DEF LeftLeg Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 -0.444227 0.013727
+            children [
+              Segment 
+              {
+                centerOfMass -0.002981 -0.194488 -0.011943
+                mass 3.537724
+                momentsOfInertia [0.044031 0.000297 0.000141 0.000297 0.005777 0.000562 0.000141 0.000562 0.043848]
+                children [ Transform { rotation -0.616432 0.590897 0.520435 2.091503 translation -0.277146 -0.314873 1.665336 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/LeftLeg.obj"}}]
+              }
+              DEF LeftFoot Joint 
+              {
+                jointType "rotate"
+                jointAxis "ZXY"
+                translation -0.002535 -0.420924 -0.014606
+                children [
+                  Segment 
+                  {
+                    centerOfMass -0.005430 -0.025070 0.047357
+                    mass 0.813409
+                    momentsOfInertia [0.001892 -0.000019 0.000057 -0.000019 0.001817 0.000117 0.000057 0.000117 0.000810]
+                    children [ Transform { rotation -0.722202 0.502977 0.474803 1.866458 translation -0.791193 -0.026974 1.510678 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/LeftFoot.obj"}}]
+                  }
+                  DEF LeftToes Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "ZXY"
+                    translation -0.000400 -0.044151 0.084991
+                    children [
+                      Segment 
+                      {
+                        centerOfMass -0.009991 0.005819 0.066822
+                        mass 0.237895
+                        momentsOfInertia [0.000141 0.000002 0.000006 0.000002 0.000208 -0.000003 0.000006 -0.000003 0.000159]
+                        children [ Transform { rotation -0.736052 0.479003 0.478313 1.884501 translation -0.818389 -0.004686 1.410124 children Shape {geometry OBJ "../Resource/motion/woody/woody_tall_sd/LeftToes.obj"}}]
+                      }
+                    ]
+                  } # LeftToes
+                  
+                ]
+              } # LeftFoot
+              
+            ]
+          } # LeftLeg
+          
+        ]
+      } # LeftUpLeg
+      
+    ]
+  } # Hips
+   ]
+}

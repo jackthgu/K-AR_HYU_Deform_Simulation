@@ -1,0 +1,20 @@
+DEF SampleRobot Humanoid { 
+ name "table"
+humanoidBody [
+DEF root Joint {
+jointType "free"
+  translation 0.000000 0.000000 0.000000
+  children [
+Segment { 
+     centerOfMass 0 0 0
+     mass 15 momentsOfInertia [0.100000 0 0 0 0.100000 0 0 0 0.100000]
+	children [ Transform { 
+					rotation -0.000000 -0.000000 -0.000000 0.000000 
+					translation -0.000000 -0.000000 -0.000000 
+					scale 0.01 0.01 0.01
+					children Shape { geometry OBJ "iguana.obj"}}]
+    }
+    ]
+}]
+}
+			

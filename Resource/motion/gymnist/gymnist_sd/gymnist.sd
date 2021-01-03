@@ -1,0 +1,347 @@
+language = c
+gravity = -0 -9.8 -0
+body = pelvis inb=$ground joint=free
+	mass =6.55868
+	inertia =0.0281122 -6.78172e-05 8.53931e-06 -6.78172e-05 0.0396693 0.000248131 8.53931e-06 0.000248131 0.0348425
+	bodytojoint = -0.00243034 -0.0248465 0.00850848
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+	pin = 0 1 0 
+	pin = 0 0 1 
+
+body = lfemur_0 inb=pelvis joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0.0955267 -0.0248465 0.00850848
+	pin = 0 1 0 
+
+body = lfemur_1 inb=lfemur_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = lfemur inb=lfemur_1 joint=pin
+	mass =6.74533
+	inertia =0.0786011 -0.000919954 -0.0006406 -0.000919954 0.0182562 0.000731059 -0.0006406 0.000731059 0.0757374
+	bodytojoint = 0.0186168 0.172318 0.00208276
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = ltibia inb=lfemur joint=pin
+	mass =2.68356
+	inertia =0.025771 0.000863241 4.16842e-05 0.000863241 0.00293507 0.000293482 4.16842e-05 0.000293482 0.025639
+	bodytojoint = 0.00489953 0.169651 0.00538461
+	inbtojoint = 0.0186168 -0.212058 0.00208276
+	pin = 1 0 0 
+
+body = lfoot_0 inb=ltibia joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0.00489953 -0.216697 0.00538461
+	pin = 0 1 0 
+
+body = lfoot_1 inb=lfoot_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = lfoot inb=lfoot_1 joint=pin
+	mass =1.13949
+	inertia =0.0027443 -9.53169e-06 -2.50488e-05 -9.53169e-06 0.0025539 -0.000185558 -2.50488e-05 -0.000185558 0.00121721
+	bodytojoint = 0.00202175 0.0360452 -0.0495133
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = ltoes inb=lfoot joint=pin
+	mass =0.315316
+	inertia =0.000186897 3.49179e-06 3.34436e-06 3.49179e-06 0.000260286 -1.54872e-05 3.34436e-06 -1.54872e-05 0.000220126
+	bodytojoint = 0.00165509 -0.0238646 -0.0489718
+	inbtojoint = 0.00202175 -0.00774485 0.0555377
+	pin = 1 0 0 
+
+body = rfemur_0 inb=pelvis joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = -0.100387 -0.0248465 0.00850848
+	pin = 0 1 0 
+
+body = rfemur_1 inb=rfemur_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = rfemur inb=rfemur_1 joint=pin
+	mass =6.80517
+	inertia =0.0794918 0.000733414 0.000576063 0.000733414 0.0187304 0.0023728 0.000576063 0.0023728 0.076394
+	bodytojoint = -0.0186991 0.17322 0.00803007
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = rtibia inb=rfemur joint=pin
+	mass =2.65248
+	inertia =0.0254519 -0.000847668 -2.41626e-05 -0.000847668 0.00288664 0.000665283 -2.41626e-05 0.000665283 0.0253504
+	bodytojoint = -0.00668714 0.162776 0.0121606
+	inbtojoint = -0.0186991 -0.218201 0.00803007
+	pin = 1 0 0 
+
+body = rfoot_0 inb=rtibia joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = -0.00668714 -0.202687 0.0121606
+	pin = 0 1 0 
+
+body = rfoot_1 inb=rfoot_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = rfoot inb=rfoot_1 joint=pin
+	mass =1.15537
+	inertia =0.00277614 3.65245e-06 -0.000147949 3.65245e-06 0.00267438 -3.93786e-05 -0.000147949 -3.93786e-05 0.00123028
+	bodytojoint = -0.000284865 0.0541969 -0.046908
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = rtoes inb=rfoot joint=pin
+	mass =0.325119
+	inertia =0.000198818 -2.99637e-06 1.24615e-06 -2.99637e-06 0.000284739 -1.03199e-05 1.24615e-06 -1.03199e-05 0.000227077
+	bodytojoint = -0.0151041 -0.0123279 -0.0554627
+	inbtojoint = -0.000284865 -0.00581108 0.04238
+	pin = 1 0 0 
+
+body = lowerback_0 inb=pelvis joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = -0.00243034 0.0796765 -0.0414915
+	pin = 0 1 0 
+
+body = lowerback_1 inb=lowerback_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = lowerback inb=lowerback_1 joint=pin
+	mass =6.01231
+	inertia =0.0236611 -0.000447822 -0.000696447 -0.000447822 0.0339286 0.00199248 -0.000696447 0.00199248 0.0326807
+	bodytojoint = -0.0055223 -0.0615441 -0.0656543
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = upperback_0 inb=lowerback joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = -0.0055223 0.113251 -0.0595943
+	pin = 0 1 0 
+
+body = upperback_1 inb=upperback_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = upperback inb=upperback_1 joint=pin
+	mass =11.4636
+	inertia =0.0741426 0.000140481 -0.00159277 0.000140481 0.0888033 0.00635786 -0.00159277 0.00635786 0.0913005
+	bodytojoint = -0.00597947 -0.11194 -0.0430796
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = lclavicle_0 inb=upperback joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = -0.00597947 0.10782 -0.0430796
+	pin = 0 1 0 
+
+body = lclavicle_1 inb=lclavicle_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = lclavicle inb=lclavicle_1 joint=pin
+	mass =0.712985
+	inertia =0.000715291 0.000207146 -1.90012e-05 0.000207146 0.00109486 6.19627e-05 -1.90012e-05 6.19627e-05 0.00100065
+	bodytojoint = -0.0997956 0.0344329 -0.025405
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = lhumerus_0 inb=lclavicle joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0.0437024 -0.0369711 -0.025405
+	pin = 0 1 0 
+
+body = lhumerus_1 inb=lhumerus_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = lhumerus inb=lhumerus_1 joint=pin
+	mass =2.18331
+	inertia =0.0115979 -0.00092405 -0.000107467 -0.00092405 0.00286186 -0.000395458 -0.000107467 -0.000395458 0.0112362
+	bodytojoint = -0.00687101 0.132187 0.00207401
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = lradius inb=lhumerus joint=pin
+	mass =1.2255
+	inertia =0.00481787 -8.03867e-05 -5.05553e-06 -8.03867e-05 0.000971082 4.80297e-05 -5.05553e-06 4.80297e-05 0.00482244
+	bodytojoint = -0.00250074 0.0939395 -0.00225602
+	inbtojoint = -0.00687101 -0.131825 0.00207401
+	pin = 1 0 0 
+
+body = lhand_0 inb=lradius joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = -0.00250074 -0.12051 -0.00225602
+	pin = 0 1 0 
+
+body = lhand_1 inb=lhand_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = lhand inb=lhand_1 joint=pin
+	mass =1.11548
+	inertia =0.00230494 0.000605557 5.30904e-05 0.000605557 0.00198868 0.000501824 5.30904e-05 0.000501824 0.00227618
+	bodytojoint = -0.0152474 0.0743726 -0.0352471
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = rclavicle_0 inb=upperback joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = -0.00597947 0.10782 -0.0430796
+	pin = 0 1 0 
+
+body = rclavicle_1 inb=rclavicle_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = rclavicle inb=rclavicle_1 joint=pin
+	mass =0.720645
+	inertia =0.000743962 -0.000231173 -2.65534e-05 -0.000231173 0.00109406 3.98581e-05 -2.65534e-05 3.98581e-05 0.00102632
+	bodytojoint = 0.117854 0.0421191 -0.0121093
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = rhumerus_0 inb=rclavicle joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = -0.011255 -0.0295829 -0.0121093
+	pin = 0 1 0 
+
+body = rhumerus_1 inb=rhumerus_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = rhumerus inb=rhumerus_1 joint=pin
+	mass =2.15767
+	inertia =0.0115112 0.000669693 8.23831e-05 0.000669693 0.00274981 -0.000195668 8.23831e-05 -0.000195668 0.0110901
+	bodytojoint = -0.00197416 0.143573 0.00102702
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = rradius inb=rhumerus joint=pin
+	mass =1.22758
+	inertia =0.00484328 -1.62931e-05 1.09579e-06 -1.62931e-05 0.000980821 -0.000167582 1.09579e-06 -0.000167582 0.00485007
+	bodytojoint = 0.000618094 0.0721147 0.000667847
+	inbtojoint = -0.00197416 -0.142115 0.00102702
+	pin = 1 0 0 
+
+body = rhand_0 inb=rradius joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0.000618094 -0.118177 0.000667847
+	pin = 0 1 0 
+
+body = rhand_1 inb=rhand_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = rhand inb=rhand_1 joint=pin
+	mass =1.10742
+	inertia =0.00271815 -0.000466999 -0.000212225 -0.000466999 0.00150021 0.000136788 -0.000212225 0.000136788 0.00231836
+	bodytojoint = 0.000817826 0.0879049 -0.0175917
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = LowerNeck_0 inb=upperback joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = -0.00597947 0.10782 -0.0430796
+	pin = 0 1 0 
+
+body = LowerNeck_1 inb=LowerNeck_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = LowerNeck inb=LowerNeck_1 joint=pin
+	mass =0.645827
+	inertia =0.000626092 2.30125e-05 4.48505e-05 2.30125e-05 0.00102653 3.46382e-05 4.48505e-05 3.46382e-05 0.000719505
+	bodytojoint = 0.00221779 -0.0166298 0.0177541
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+
+body = Neck_0 inb=LowerNeck joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0.00131579 0.0651622 0.0019631
+	pin = 0 1 0 
+
+body = Neck_1 inb=Neck_0 joint=pin
+	mass =0.1
+	inertia =0.01 0 0 0 0.01 0 0 0 0.01
+	bodytojoint = -0 -0 -0
+	inbtojoint = 0 0 0
+	pin = 0 0 1 
+
+body = Neck inb=Neck_1 joint=pin
+	mass =3.04716
+	inertia =0.0109912 -0.000209101 -7.68791e-05 -0.000209101 0.00739777 -0.000673798 -7.68791e-05 -0.000673798 0.0100246
+	bodytojoint = -0.00775576 -0.038622 -0.0377839
+	inbtojoint = 0 0 0
+	pin = 1 0 0 
+

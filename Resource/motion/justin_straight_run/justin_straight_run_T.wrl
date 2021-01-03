@@ -1,0 +1,383 @@
+DEF SampleRobot Humanoid { 
+ name "justin_straight_run"
+ humanoidBody [
+
+  DEF root Joint 
+  {
+    jointType "free"
+    jointAxis "X"
+    translation 0 0 0 
+    children [
+      Segment 
+      {
+        centerOfMass 0.000000 0.000000 0.000000
+        mass 8.779448
+        momentsOfInertia [0.048093 -0.000107 -0.000001 -0.000107 0.068124 0.000627 -0.000001 0.000627 0.059863]
+        material "lightgrey"
+        children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.019546 -0.966744 0.133990 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/root.obj"}}]
+      
+      }
+      DEF lfemur Joint 
+      {
+        jointType "rotate"
+        jointAxis "YZX"
+        translation 0.099810 0.000183 -0.007168
+        children [
+          Segment 
+          {
+            centerOfMass 0.000000 0.000000 0.000000
+            mass 8.958149
+            momentsOfInertia [0.133325 -0.001702 -0.001157 -0.001702 0.030936 0.001329 -0.001157 0.001329 0.128496]
+            material "lightgrey"
+            children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.119356 -0.966927 0.141158 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/lfemur.obj"}}]
+          
+          }
+          DEF ltibia Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 -0.466191 0.000000
+            children [
+              Segment 
+              {
+                centerOfMass 0.000000 0.000000 0.000000
+                mass 3.544603
+                momentsOfInertia [0.043622 0.001418 0.000068 0.001418 0.010000 0.000468 0.000068 0.000468 0.043425]
+                material "lightgrey"
+                children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.119356 -0.500736 0.141158 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/ltibia.obj"}}]
+              
+              }
+              DEF lfoot Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation 0.000000 -0.446688 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.000000 0.000000 0.000000
+                    mass 1.393075
+                    momentsOfInertia [0.010000 0.000016 -0.000158 0.000016 0.010000 0.000235 -0.000158 0.000235 0.010000]
+                    material "lightgrey"
+                    children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.119356 -0.054048 0.141158 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/lfoot.obj"}}]
+                  
+                  }
+                  DEF ltoes Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "X"
+                    translation 0.027390 -0.030730 0.116847
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.000000 0.000000 0.000000
+                        mass 0.389064
+                        momentsOfInertia [0.010000 0.000002 0.000005 0.000002 0.010000 -0.000013 0.000005 -0.000013 0.010000]
+                        material "lightgrey"
+                        children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.146746 -0.023318 0.024310 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/ltoes.obj"}}]
+                      
+                      }
+                    ]
+                  } # ltoes
+                  
+                ]
+              } # lfoot
+              
+            ]
+          } # ltibia
+          
+        ]
+      } # lfemur
+      
+      DEF rfemur Joint 
+      {
+        jointType "rotate"
+        jointAxis "YZX"
+        translation -0.099810 -0.000183 0.007168
+        children [
+          Segment 
+          {
+            centerOfMass 0.000000 0.000000 0.000000
+            mass 9.053110
+            momentsOfInertia [0.134893 0.001413 0.000845 0.001413 0.031654 0.003918 0.000845 0.003918 0.129760]
+            material "lightgrey"
+            children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation 0.080264 -0.966562 0.126822 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/rfemur.obj"}}]
+          
+          }
+          DEF rtibia Joint 
+          {
+            jointType "rotate"
+            jointAxis "X"
+            translation 0.000000 -0.469832 0.000000
+            children [
+              Segment 
+              {
+                centerOfMass 0.000000 0.000000 0.000000
+                mass 3.521867
+                momentsOfInertia [0.043524 -0.001421 -0.000043 -0.001421 0.010000 0.001135 -0.000043 0.001135 0.043345]
+                material "lightgrey"
+                children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation 0.080264 -0.496730 0.126822 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/rtibia.obj"}}]
+              
+              }
+              DEF rfoot Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation 0.000000 -0.430070 0.000000
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.000000 0.000000 0.000000
+                    mass 1.477621
+                    momentsOfInertia [0.010000 0.000061 -0.000305 0.000061 0.010000 0.000302 -0.000305 0.000302 0.010000]
+                    material "lightgrey"
+                    children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation 0.080264 -0.066660 0.126822 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/rfoot.obj"}}]
+                  
+                  }
+                  DEF rtoes Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "X"
+                    translation -0.044348 -0.033722 0.111819
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.000000 0.000000 0.000000
+                        mass 0.419112
+                        momentsOfInertia [0.010000 -0.000007 0.000003 -0.000007 0.010000 -0.000010 0.000003 -0.000010 0.010000]
+                        material "lightgrey"
+                        children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation 0.124612 -0.032937 0.015003 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/rtoes.obj"}}]
+                      
+                      }
+                    ]
+                  } # rtoes
+                  
+                ]
+              } # rfoot
+              
+            ]
+          } # rtibia
+          
+        ]
+      } # rfemur
+      
+      DEF lowerback Joint 
+      {
+        jointType "rotate"
+        jointAxis "ZX"
+        translation -0.003899 0.108938 -0.051517
+        children [
+          Segment 
+          {
+            centerOfMass 0.000000 0.000000 0.000000
+            mass 7.930662
+            momentsOfInertia [0.039436 -0.001107 -0.000710 -0.001107 0.057463 0.003022 -0.000710 0.003022 0.054280]
+            material "lightgrey"
+            children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.015647 -1.075682 0.185507 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/lowerback.obj"}}]
+          
+          }
+          DEF upperback Joint 
+          {
+            jointType "rotate"
+            jointAxis "YZX"
+            translation -0.005422 0.147669 0.038724
+            children [
+              Segment 
+              {
+                centerOfMass 0.000000 0.000000 0.000000
+                mass 13.291776
+                momentsOfInertia [0.099328 0.001074 0.000963 0.001074 0.112542 0.006458 0.000963 0.006458 0.146677]
+                material "lightgrey"
+                children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.010224 -1.223351 0.146784 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/upperback.obj"}}]
+              
+              }
+              DEF lclavicle Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation 0.001306 0.233127 0.018620
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.000000 0.000000 0.000000
+                    mass 0.926255
+                    momentsOfInertia [0.010000 0.000379 0.000001 0.000379 0.010000 0.000093 0.000001 0.000093 0.010000]
+                    material "lightgrey"
+                    children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.011531 -1.456478 0.128164 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/lclavicle.obj"}}]
+                  
+                  }
+                  DEF lhumerus Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "YZX"
+                    translation 0.165799 0.012165 -0.025923
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.000000 0.000000 0.000000
+                        mass 2.867971
+                        momentsOfInertia [0.019273 -0.002111 -0.000163 -0.002111 0.010000 -0.000196 -0.000163 -0.000196 0.018830]
+                        material "lightgrey"
+                        children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.177329 -1.468643 0.154087 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/lhumerus.obj"}}]
+                      
+                      }
+                      DEF lradius Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "Y"
+                        translation 0.292459 0.000000 0.000000
+                        children [
+                          Segment 
+                          {
+                            centerOfMass 0.000000 0.000000 0.000000
+                            mass 1.613594
+                            momentsOfInertia [0.010000 -0.000141 -0.000010 -0.000141 0.010000 0.000162 -0.000010 0.000162 0.010000]
+                            material "lightgrey"
+                            children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.469788 -1.468643 0.154087 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/lradius.obj"}}]
+                          
+                          }
+                          DEF lhand Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "X"
+                            translation 0.246178 0.000000 0.000000
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 1.254473
+                                momentsOfInertia [0.010000 -0.000200 0.000122 -0.000200 0.010000 0.000333 0.000122 0.000333 0.010000]
+                                material "lightgrey"
+                                children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.715966 -1.468643 0.154087 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/lhand.obj"}}]
+                              
+                              }
+                            ]
+                          } # lhand
+                          
+                        ]
+                      } # lradius
+                      
+                    ]
+                  } # lhumerus
+                  
+                ]
+              } # lclavicle
+              
+              DEF rclavicle Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation 0.001306 0.233127 0.018620
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.000000 0.000000 0.000000
+                    mass 0.933003
+                    momentsOfInertia [0.010000 -0.000363 -0.000021 -0.000363 0.010000 0.000076 -0.000021 0.000076 0.010000]
+                    material "lightgrey"
+                    children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.011531 -1.456478 0.128164 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/rclavicle.obj"}}]
+                  
+                  }
+                  DEF rhumerus Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "YZX"
+                    translation -0.177312 0.001893 -0.013144
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.000000 0.000000 0.000000
+                        mass 2.843232
+                        momentsOfInertia [0.019376 0.001142 0.000141 0.001142 0.010000 -0.000337 0.000141 -0.000337 0.018719]
+                        material "lightgrey"
+                        children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation 0.165781 -1.458371 0.141308 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/rhumerus.obj"}}]
+                      
+                      }
+                      DEF rradius Joint 
+                      {
+                        jointType "rotate"
+                        jointAxis "Y"
+                        translation -0.294767 0.000000 0.000000
+                        children [
+                          Segment 
+                          {
+                            centerOfMass 0.000000 0.000000 0.000000
+                            mass 1.634961
+                            momentsOfInertia [0.010000 -0.000022 0.000013 -0.000022 0.010000 -0.000285 0.000013 -0.000285 0.010000]
+                            material "lightgrey"
+                            children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation 0.460548 -1.458371 0.141308 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/rradius.obj"}}]
+                          
+                          }
+                          DEF rhand Joint 
+                          {
+                            jointType "rotate"
+                            jointAxis "X"
+                            translation -0.250864 0.000000 0.000000
+                            children [
+                              Segment 
+                              {
+                                centerOfMass 0.000000 0.000000 0.000000
+                                mass 1.261296
+                                momentsOfInertia [0.010000 0.000208 -0.000120 0.000208 0.010000 0.000327 -0.000120 0.000327 0.010000]
+                                material "lightgrey"
+                                children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation 0.711412 -1.458371 0.141308 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/rhand.obj"}}]
+                              
+                              }
+                            ]
+                          } # rhand
+                          
+                        ]
+                      } # rradius
+                      
+                    ]
+                  } # rhumerus
+                  
+                ]
+              } # rclavicle
+              
+              DEF LowerNeck Joint 
+              {
+                jointType "rotate"
+                jointAxis "YZX"
+                translation 0.001306 0.233127 0.018620
+                children [
+                  Segment 
+                  {
+                    centerOfMass 0.000000 0.000000 0.000000
+                    mass 0.861428
+                    momentsOfInertia [0.010000 -0.000012 0.000013 -0.000012 0.010000 -0.000153 0.000013 -0.000153 0.010000]
+                    material "lightgrey"
+                    children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.011531 -1.456478 0.128164 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/LowerNeck.obj"}}]
+                  
+                  }
+                  DEF Neck Joint 
+                  {
+                    jointType "rotate"
+                    jointAxis "ZX"
+                    translation -0.010991 0.098462 0.037893
+                    children [
+                      Segment 
+                      {
+                        centerOfMass 0.000000 0.000000 0.000000
+                        mass 4.045299
+                        momentsOfInertia [0.018768 -0.000198 -0.000091 -0.000198 0.013317 -0.002132 -0.000091 -0.002132 0.016088]
+                        material "lightgrey"
+                        children [ Transform { rotation -0.000000 -0.000000 -0.000000 0.000000 translation -0.000540 -1.554940 0.090271 children Shape {geometry OBJ "../Resource/motion/justin_straight_run/justin_straight_run_T_sd/Neck.obj"}}]
+                      
+                      }
+                    ]
+                  } # Neck
+                  
+                ]
+              } # LowerNeck
+              
+            ]
+          } # upperback
+          
+        ]
+      } # lowerback
+      
+    ]
+  } # root
+   ]
+}
