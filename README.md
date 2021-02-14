@@ -23,6 +23,7 @@ Ubuntu (18.04)
 
 ## Third-party 
 시뮬레이션에 쓰이는 tetrahedral 파일 형식은 tet 이며 이 파일을 생성하기 위해서는 tetgen 이 필요합니다
+http://wias-berlin.de/software/tetgen/
 
 ## Make tetrahedral
 ```
