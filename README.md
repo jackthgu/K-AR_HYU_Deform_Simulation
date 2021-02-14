@@ -13,12 +13,12 @@ Ubuntu (18.04)
 ```
 2. Build
 ```
-make
+> make
 ```
 ## How to run
 ```
-cd src
-make run
+> cd src
+> make run
 ```
 
 ## Third-party 
@@ -26,10 +26,10 @@ make run
 
 ## Make tetrahedral
 ```
-cd src/makeTet
-python objtopoly.py target.obj
-tetgen -pq target.poly
-python nodetotet.py target.1
+> cd src/makeTet
+> python objtopoly.py target.obj
+> tetgen -pq target.poly
+> python nodetotet.py target.1
 ```
 ## License
 Distributed under the MIT License. See LICENSE for more information.
