@@ -25,7 +25,7 @@ Ubuntu (18.04)
 시뮬레이션에 쓰이는 tetrahedral 파일 형식은 tet 이며 이 파일을 생성하기 위해서는 tetgen 이 필요합니다
 http://wias-berlin.de/software/tetgen/
 
-## Make tetrahedral
+## Make tetrahedral file
 ```
 > cd src/makeTet
 > python objtopoly.py target.obj
@@ -37,6 +37,7 @@ Distributed under the MIT License. See LICENSE for more information.
 
 ## Contact
 Send to email 
-gestoru@hanyang.ac.kr
+gestoru@hanyang.ac.kr 
+
 Our lab
 http://calab.hanyang.ac.kr
